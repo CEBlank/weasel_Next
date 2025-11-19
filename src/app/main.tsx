@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import './index.css';
 //import { BrowserRouter } from 'react-router-dom';
 import './App.css';
-import { Auth0Provider } from '@auth0';
+import { Auth0Provider } from '@auth0/nextjs-auth0';
 
 //import Nav from './Nav'
 //import Router from './Router';
