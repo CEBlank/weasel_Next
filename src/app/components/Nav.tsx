@@ -1,3 +1,7 @@
+//working HeadlessUI for React with NextJS
+import { forwardRef } from 'react'
+import Link from 'next/link'
+
 import { useState } from 'react'
 
 import './App.css'
@@ -259,7 +263,7 @@ const Nav = () => {
               {/* Mobile view Login */}
             <div className="space-y-6 border-t border-gray-200 px-4 py-6">
               <div className="flow-root">
-                {authUser()}
+                {/* {authUser()} */}
               </div>
             </div>
 
@@ -382,7 +386,7 @@ const Nav = () => {
 
             <div  className="ml-auto flex items-center">
               <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                  {authUser()}
+                  {/* {authUser()} */}
 
               {/*  <a id='login' href="#" className="text-sm font-medium">
                   {LoginButton()}
