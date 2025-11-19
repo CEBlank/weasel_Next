@@ -1,10 +1,12 @@
+"use client"
+
 //working HeadlessUI for React with NextJS
 import { forwardRef } from 'react'
 import Link from 'next/link'
+import React from 'react';
 
-import { useState } from 'react'
 
-import './App.css'
+//import './App.css'
 import {
   Dialog,
   DialogBackdrop,
@@ -17,8 +19,9 @@ import {
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline';
 //import LoginButton from './LoginButton';
 //import LogoutButton from './LogOutButton';
-//import { authUser } from './userAuth';
-//import { useLocation }  from 'react-router-dom';
+import authUser from './userAuth';
+import LoginButton from './LoginButton'
+import LogoutButton from './LogOutButton'
 
 
 const navLinks = {
@@ -170,7 +173,7 @@ const navLinks = {
 }
 
 const Nav = () => {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = React.useState(false)
 
  // console.log('Nav Loaded')
 
@@ -263,7 +266,9 @@ const Nav = () => {
               {/* Mobile view Login */}
             <div className="space-y-6 border-t border-gray-200 px-4 py-6">
               <div className="flow-root">
-                {/* {authUser()} */}
+                <a>
+                  {/* {authUser()} */}
+                </a>
               </div>
             </div>
 
@@ -386,14 +391,15 @@ const Nav = () => {
 
             <div  className="ml-auto flex items-center">
               <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                  {/* {authUser()} */}
+                {authUser()} 
 
-              {/*  <a id='login' href="#" className="text-sm font-medium">
+{/*               <p id='login'  className="text-sm font-medium">
                   {LoginButton()}
-                </a>
-                <a id='logout' href="#" className="text-sm font-medium">
+                </p>
+                <p id='logout' className="text-sm font-medium">
                   {LogoutButton()}
-                </a> */}
+                </p> */}
+                
               </div> 
 
 

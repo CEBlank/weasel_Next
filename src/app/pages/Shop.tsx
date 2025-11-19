@@ -1,4 +1,4 @@
-export function Shop() {
+export default function Shop() {
 
 const products = [
   {
