@@ -9,7 +9,7 @@ import LoginButton from "./LoginButton";
 import LogoutButton from "./LogOutButton";
 import Link from "next/link";
 
-export default async function authUser() {
+export default function authUser() {
   const { user, error, isLoading } = useUser();
 
   if (isLoading) return <div>Loading...</div>;

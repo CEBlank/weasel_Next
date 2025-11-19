@@ -19,7 +19,7 @@ import {
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline';
 //import LoginButton from './LoginButton';
 //import LogoutButton from './LogOutButton';
-import authUser from './userAuth';
+//import authUser from './userAuth';
 import LoginButton from './LoginButton'
 import LogoutButton from './LogOutButton'
 
@@ -391,14 +391,14 @@ const Nav = () => {
 
             <div  className="ml-auto flex items-center">
               <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                {authUser()} 
+                {/* {authUser()}  */}
 
-{/*               <p id='login'  className="text-sm font-medium">
+              <p id='login'  className="text-sm font-medium">
                   {LoginButton()}
                 </p>
                 <p id='logout' className="text-sm font-medium">
                   {LogoutButton()}
-                </p> */}
+                </p>
                 
               </div> 
 
