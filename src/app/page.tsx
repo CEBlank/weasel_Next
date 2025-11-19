@@ -14,7 +14,7 @@ import Shop from "./pages/Shop";
 import Events from "./pages/Events";
 import About from "./pages/About";
 import Community from "./pages/Community";
-import Admin from "./pages/Admin";
+import Admin from "./AdminPages/Admin";
 
 
 export default function Home() {
@@ -24,7 +24,6 @@ export default function Home() {
       <div className="main-card-wrapper">
         
         <Nav />   
-
 
       </div>
     </div>
