@@ -12,6 +12,8 @@
     "@auth0/nextjs-auth0": "^4.13.0",
     "@clerk/nextjs": "^6.35.2",
     "auth0": "^5.1.0",
+    "headlessui": "^0.0.0",
+    "heroicons": "^2.2.0",
     "mongodb": "^7.0.0",
     "next": "16.0.3",
     "react": "19.2.0",
