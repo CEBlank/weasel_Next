@@ -12,6 +12,9 @@ export default function Home() {
   return (
     <div className="app-container">
       <div className="main-card-wrapper">
+
+        There is no Home Page
+
       </div>
     </div>
   );
