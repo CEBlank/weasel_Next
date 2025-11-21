@@ -14,6 +14,7 @@ export default function Home() {
       <div className="main-card-wrapper">
 
         There is no Home Page
+        The home page is a lie
 
       </div>
     </div>
