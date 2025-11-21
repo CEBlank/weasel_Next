@@ -9,21 +9,9 @@ import LoginButton from "./LoginButton";
 import LogoutButton from "./LogOutButton";
 import Link from "next/link";
 
+
 export default function authUser() {
-  const { user, error, isLoading } = useUser();
-
-  if (isLoading) return <div>Loading...</div>;
-
-  if (error) return <div>
-                      Error: {error.message}</div>;
-
-/*   if (user) return <div>
-                      {LogoutButton()}
-                        </div>;
-
-  if (!user) return <div>
-                      {LoginButton()}
-                    </div>; */
+  const { user } = useUser();
 
   console.log("user everything: ", user);
   
@@ -42,13 +30,17 @@ export default function authUser() {
             </div>
 
             <div className="border-l pl-2">
-              {LogoutButton()}
+
+              <LogoutButton />
+
             </div>
 
           </div>
     ) : 
       <div>
-        {LoginButton()}
+      
+      <LoginButton />
+
       </div>
           
   );

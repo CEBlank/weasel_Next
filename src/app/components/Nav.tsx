@@ -17,9 +17,8 @@ import {
   PopoverPanel,
 } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline';
-//import LoginButton from './LoginButton';
-//import LogoutButton from './LogOutButton';
-//import authUser from './userAuth';
+
+import authUser from './userAuth';
 import LoginButton from './LoginButton'
 import LogoutButton from './LogOutButton'
 
@@ -267,7 +266,7 @@ const Nav = () => {
             <div className="space-y-6 border-t border-gray-200 px-4 py-6">
               <div className="flow-root">
                 <a>
-                  {/* {authUser()} */}
+                  {/* {authUser()}  */}
                 </a>
               </div>
             </div>
@@ -393,12 +392,18 @@ const Nav = () => {
               <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                 {/* {authUser()}  */}
 
-              <p id='login'  className="text-sm font-medium">
-                  {LoginButton()}
-                </p>
-                <p id='logout' className="text-sm font-medium">
-                  {LogoutButton()}
-                </p>
+              <div id='login'  className="text-sm font-medium">
+
+                  <LoginButton />
+
+                  {/* {LoginButton()} */}
+                </div>
+                <div id='logout' className="text-sm font-medium">
+
+                  <LogoutButton />
+
+                  {/* {LogoutButton()} */}
+                </div>
                 
               </div> 
 

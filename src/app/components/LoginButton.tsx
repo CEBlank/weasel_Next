@@ -1,12 +1,14 @@
 "use client";
 
 export default function LoginButton() {
+
   return (
-    <a
-      href="/auth/login"
-      className="button login"
+    <button
+      //href="/auth/login"
+      className="btn btn-success"
+      id="heroBtn"
     >
       Log In
-    </a>
+    </button>
   );
-}
+} 

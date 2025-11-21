@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-//import { Auth0Provider } from "@auth0/nextjs-auth0/client";
+import { Auth0Provider } from "@auth0/nextjs-auth0/client";
 import "./globals.css";
+
+import Nav from "./components/Nav";
 
 export const metadata: Metadata = {
   title: "Weasel Games",
@@ -14,11 +16,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-      
-          {children}
-        
-      </body>
+
+          <body>
+              <Nav />
+              <Auth0Provider>
+                {children}
+              </Auth0Provider>
+          </body>
+
     </html>
   );
 }

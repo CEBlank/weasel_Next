@@ -3,9 +3,19 @@ import { redirect } from "next/navigation";
 
 import { useUser } from "@auth0/nextjs-auth0";
 import { PhotoIcon } from "@heroicons/react/24/outline";
+import LoginButton from "app/components/LoginButton";
 
 export default function Account()  {
-// const { user, error, isLoading } = useUser();
+  const { user } = useUser();
+
+    console.log("account User source:", user);
+
+    if (!user) {
+      return (
+        { LoginButton }
+      )
+    }
+
 
 
   return (

@@ -8,7 +8,6 @@ import { Route, Routes } from "react-router-dom";
 
 
 import Account from "./pages/Account";
-import Nav from "./components/Nav";
 import HomePage from "./pages/Home";
 import Shop from "./pages/Shop";
 import Events from "./pages/Events";
@@ -23,7 +22,6 @@ export default function Home() {
     <div className="app-container">
       <div className="main-card-wrapper">
         
-        <Nav />   
 
       </div>
     </div>
