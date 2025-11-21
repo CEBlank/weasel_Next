@@ -28,9 +28,12 @@ export default function RootLayout({
 
           <body>
               <Nav />
-              <Auth0Provider>
+
+              {children}
+
+{/*               <Auth0Provider>
                 {children}
-              </Auth0Provider>
+              </Auth0Provider> */}
           </body>
 
     </html>
