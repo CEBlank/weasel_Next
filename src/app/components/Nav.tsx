@@ -19,8 +19,8 @@ import {
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline';
 
 import authUser from './userAuth';
-import LoginButton from './LoginButton'
-import LogoutButton from './LogOutButton'
+//import LoginButton from './LoginButton'
+//import LogoutButton from './LogOutButton'
 
 
 const navLinks = {
@@ -166,8 +166,9 @@ const navLinks = {
   ],
     pages: [
     { name: 'Home', href: '/' },
-    { name: 'Shop All', href: './shop' },
-    { name: 'About', href: './about' },
+    { name: 'Shop All', href: './pages/Shop' },
+    { name: 'Events', href: './pages/Events' },
+    { name: 'About', href: './pages/About' },
   ]
 }
 
@@ -264,10 +265,8 @@ const Nav = () => {
 
               {/* Mobile view Login */}
             <div className="space-y-6 border-t border-gray-200 px-4 py-6">
-              <div className="flow-root">
-                <a>
-                  {/* {authUser()}  */}
-                </a>
+              <div className="flow-root"> 
+                  {authUser()}                    
               </div>
             </div>
 
@@ -390,20 +389,18 @@ const Nav = () => {
 
             <div  className="ml-auto flex items-center">
               <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                {/* {authUser()}  */}
+                {authUser()}  
 
-              <div id='login'  className="text-sm font-medium">
+{/*               <div id='login'  className="text-sm font-medium">
 
                   <LoginButton />
 
-                  {/* {LoginButton()} */}
                 </div>
                 <div id='logout' className="text-sm font-medium">
 
                   <LogoutButton />
 
-                  {/* {LogoutButton()} */}
-                </div>
+                </div> */}
                 
               </div> 
 

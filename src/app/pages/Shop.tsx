@@ -1,4 +1,4 @@
-export default function Shop() {
+const Shop = () => {
 
 const products = [
   {
@@ -91,3 +91,5 @@ const products = [
     </div>
   )
 }
+
+export default Shop;

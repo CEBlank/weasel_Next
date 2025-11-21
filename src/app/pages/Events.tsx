@@ -1,6 +1,5 @@
 
-
-export default function Events() {
+const Events = () => {
 
   return (
     <>
@@ -129,3 +128,5 @@ export default function Events() {
     </>
   )
 }
+
+export default Events;

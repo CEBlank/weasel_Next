@@ -1,5 +1,5 @@
 
-export default function HomePage() {
+const HomePage = () => {
 
   console.log('Home Loaded')
 
@@ -147,3 +147,4 @@ export default function HomePage() {
   )
 }
 
+export default HomePage()

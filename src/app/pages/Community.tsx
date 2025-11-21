@@ -1,4 +1,4 @@
-export default function Community() {
+const Community = () => {
 
   console.log("Routed to the Community Page")
 
@@ -11,3 +11,5 @@ export default function Community() {
     </>
   )
 }
+
+export default Community;

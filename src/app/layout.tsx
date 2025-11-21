@@ -4,6 +4,15 @@ import "./globals.css";
 
 import Nav from "./components/Nav";
 
+import Account from "./pages/Account";
+import HomePage from "./pages/Home";
+import Shop from "./pages/Shop";
+import Events from "./pages/Events";
+import About from "./pages/About";
+import Community from "./pages/Community";
+import Admin from "./AdminPages/Admin";
+
+
 export const metadata: Metadata = {
   title: "Weasel Games",
   description: "Weasel Games Shop",
