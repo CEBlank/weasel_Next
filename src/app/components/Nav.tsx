@@ -180,9 +180,9 @@ const navLinks = {
   ],
     pages: [
     { name: 'Home', href: '/' },
-    { name: 'Shop All', href: './Shop' },
-    { name: 'Events', href: './Events' },
-    { name: 'About', href: './About' },
+    { name: 'Shop All', href: '../pages/Shop' },
+    { name: 'Events', href: '../pages/Events' },
+    { name: 'About', href: '../pages/About' },
   ]
 }
 
