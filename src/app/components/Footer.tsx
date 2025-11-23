@@ -10,8 +10,8 @@ const Footing = () => {
       <Image
         src={"/weaselArcherHead.png"}
         alt="Wesley the Weasel Mascot"
-        height={100}
-        width={90}
+        height={60}
+        width={50}
         className="max-w-sm rounded-lg"/>
     <p>
       Weasel Games Company
@@ -50,7 +50,7 @@ const Footing = () => {
         src={"/instaPNG.png"}
         alt="Instagram Icon"
         height={30}
-        width={25} />
+        width={30} />
       </a>
     </div>
   </nav>

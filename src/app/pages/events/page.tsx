@@ -88,8 +88,9 @@ const Events = () => {
           </div>
           <figure>
             <img
-              src={'trophy.jpg'}
-              alt="trophy" />
+              src={'/trophy.jpg'}
+              alt="trophy" 
+              />
           </figure>
         </div>
 
@@ -102,7 +103,7 @@ const Events = () => {
           </div>
           <figure>
             <img
-              src={'yugiohh.jpg'}
+              src={'/yugiohh.jpg'}
               alt="yugioh" />
           </figure>
         </div>
@@ -116,7 +117,7 @@ const Events = () => {
           </div>
           <figure>
             <img
-              src={'gameNight.jpg'}
+              src={'/gameNight.jpg'}
               alt="gameNight" />
           </figure>
         </div>
