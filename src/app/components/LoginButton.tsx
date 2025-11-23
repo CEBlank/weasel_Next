@@ -1,8 +1,13 @@
 "use client";
 
+//import './envConfig.ts'
 import Link from "next/link";
 
 export default function LoginButton() {
+
+  const logUrl = process.env.AUTH0_ISSUER_BASE_UR;
+
+  console.log(logUrl);
 
   return (
 
@@ -14,7 +19,9 @@ export default function LoginButton() {
           <Link 
             className="text-sm"
             id="logInOut"
-            href="/auth/login">
+            href="/auth/login"
+            //href={logUrl}
+            >
               Login
           </Link> 
       </div>

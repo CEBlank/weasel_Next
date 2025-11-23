@@ -13,6 +13,7 @@
     "@clerk/nextjs": "^6.35.2",
     "@headlessui/react": "^2.2.9",
     "@heroicons/react": "^2.2.0",
+    "@next/env": "^16.0.3",
     "auth0": "^5.1.0",
     "daisyui": "^5.5.5",
     "headlessui": "^0.0.0",
