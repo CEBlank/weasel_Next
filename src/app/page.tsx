@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { Route, Routes } from "react-router-dom";
 
 import './app.css'
+import Events from "./pages/Events";
 
 
 //import LoginButton from "./components/LoginButton";

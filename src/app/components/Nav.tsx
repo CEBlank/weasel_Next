@@ -1,6 +1,7 @@
 "use client"
 
 //working HeadlessUI for React with NextJS
+import Router from 'next/router';
 import { forwardRef } from 'react'
 import Link from 'next/link'
 import React from 'react';
@@ -179,9 +180,9 @@ const navLinks = {
   ],
     pages: [
     { name: 'Home', href: '/' },
-    { name: 'Shop All', href: '../pages/Shop' },
-    { name: 'Events', href: '../pages/Events' },
-    { name: 'About', href: '../page/About' },
+    { name: 'Shop All', href: './Shop' },
+    { name: 'Events', href: './Events' },
+    { name: 'About', href: './About' },
   ]
 }
 
@@ -269,9 +270,9 @@ const Nav = () => {
             <div className="space-y-6 border-t border-gray-200 px-4 py-6">
               {navLinks.pages.map((page) => (
                 <div key={page.name} className="flow-root">
-                  <Link href={page.href} className="-m-2 block p-2 font-medium text-gray-900">
+                  <a href={page.href} className="-m-2 block p-2 font-medium text-gray-900">
                     {page.name}
-                  </Link>
+                  </a>
                 </div>
               ))}
             </div>

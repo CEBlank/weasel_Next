@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import { Auth0Provider } from "@auth0/nextjs-auth0/client";
 import './app.css'
 
+import Link from 'next/link';
 
 import Nav from "./components/Nav";
+import Footing from "./components/Footer";
 
 import Account from "./pages/Account";
 import HomePage from "./Home";
@@ -14,12 +16,13 @@ import Community from "./pages/Community";
 import Admin from "./AdminPages/Admin";
 
 
+
 export const metadata: Metadata = {
   title: "Weasel Games",
   description: "Weasel Games Shop",
 };
 
-export default function Layout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -32,6 +35,7 @@ export default function Layout({
               <Auth0Provider>
                 {children}
               </Auth0Provider>
+              <Footing />
           </body>
 
     </html>
