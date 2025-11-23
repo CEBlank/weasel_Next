@@ -117,6 +117,7 @@ const navLinks = {
       ]
     },
     // Commnuity and Events
+
     {
       id:'community',
       name: 'Community',
@@ -256,9 +257,9 @@ const Nav = () => {
             <div className="space-y-6 border-t border-gray-200 px-4 py-6">
               {navLinks.pages.map((page) => (
                 <div key={page.name} className="flow-root">
-                  <a href={page.href} className="-m-2 block p-2 font-medium text-gray-900">
+                  <Link href={page.href} className="-m-2 block p-2 font-medium text-gray-900">
                     {page.name}
-                  </a>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -298,14 +299,14 @@ const Nav = () => {
             <div className="ml-4 flex lg:ml-0">
               <h3 className='text-center content-center' 
                   id="logoHeader">Weasel <br /> Games</h3>
-              <a href="/">
+              <Link href="/">
                 <span className="sr-only">Weasel Games</span>
                 <img
                   alt="Weasel Games"
                   src={"weaselArcherHead.png"}
                   className="w-16 h-20"
                 />
-              </a>
+              </Link>
             </div>
 
       {/* The Main Display popovers - Not Mobile */}
@@ -337,10 +338,10 @@ const Nav = () => {
                                     <img
                                       className="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75"
                                     />
-                                    <a href={item.href} className="mt-6 block font-medium">
+                                    <Link href={item.href} className="mt-6 block font-medium">
                                       <span aria-hidden="true" className="absolute inset-0 z-10" />
                                       {item.name}
-                                    </a>
+                                    </Link>
                                   </div>
                                 ))}
                               </div>
@@ -358,9 +359,9 @@ const Nav = () => {
                                     >
                                       {section.items.map((item) => (
                                         <li id='itemLine' key={item.name} className="flex">
-                                          <a href={item.href} className="hover:text-gray-800">
+                                          <Link href={item.href} className="hover:text-gray-800">
                                             {item.name}
-                                          </a>
+                                          </Link>
                                         </li>
                                       ))}
                                     </ul>
@@ -374,11 +375,11 @@ const Nav = () => {
                   </Popover>
                 ))}
                 {navLinks.pages.map((page) => (
-                  <a id='pages' key={page.name}
+                  <Link id='pages' key={page.name}
                   href={page.href}
                   className='flex items-center text-sm font-medium'>
                     {page.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </PopoverGroup>

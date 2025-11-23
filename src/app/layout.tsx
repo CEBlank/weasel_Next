@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Auth0Provider } from "@auth0/nextjs-auth0/client";
-import "./globals.css";
+import './app.css'
+
 
 import Nav from "./components/Nav";
 
 import Account from "./pages/Account";
-import HomePage from "./pages/Home";
+import HomePage from "./Home";
 import Shop from "./pages/Shop";
 import Events from "./pages/Events";
 import About from "./pages/About";
@@ -28,12 +29,9 @@ export default function RootLayout({
 
           <body>
               <Nav />
-
-              {children}
-
-{/*               <Auth0Provider>
+              <Auth0Provider>
                 {children}
-              </Auth0Provider> */}
+              </Auth0Provider>
           </body>
 
     </html>

@@ -1,5 +1,5 @@
 
-const HomePage = () => {
+const Home = () => {
 
   console.log('Home Loaded')
 
@@ -147,4 +147,4 @@ const HomePage = () => {
   )
 }
 
-export default HomePage()
+export default Home()
