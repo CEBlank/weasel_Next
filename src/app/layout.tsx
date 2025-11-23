@@ -7,13 +7,13 @@ import Link from 'next/link';
 import Nav from "./components/Nav";
 import Footing from "./components/Footer";
 
-import Account from "./pages/Account";
+import Account from "./pages/account/page";
 import HomePage from "./Home";
-import Shop from "./pages/Shop";
-import Events from "./pages/Events";
-import About from "./pages/About";
-import Community from "./pages/Community";
-import Admin from "./AdminPages/Admin";
+import Shop from "./pages/shop/page";
+import Events from "./pages/events/page";
+import About from "./pages/about/page";
+import Community from "./pages/community/page";
+import Admin from "./AdminPages/admin/page";
 
 
 
