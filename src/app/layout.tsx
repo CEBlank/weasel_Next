@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description: "Weasel Games Shop",
 };
 
-export default function RootLayout({
+export default function Layout({
   children,
 }: {
   children: React.ReactNode;

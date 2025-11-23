@@ -4,6 +4,7 @@
 import { forwardRef } from 'react'
 import Link from 'next/link'
 import React from 'react';
+import Image from 'next/image'
 
 
 //import './App.css'
@@ -21,6 +22,17 @@ import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@her
 import authUser from './userAuth';
 //import LoginButton from './LoginButton'
 //import LogoutButton from './LogOutButton'
+
+//for reference
+/* 
+import Account from "../pages/Account";
+import HomePage from "../Home";
+import Shop from "../pages/Shop";
+import Events from "../pages/Events";
+import About from "../pages/About";
+import Community from "../pages/Community";
+import Admin from "../AdminPages/Admin"; 
+*/
 
 
 const navLinks = {
@@ -167,9 +179,9 @@ const navLinks = {
   ],
     pages: [
     { name: 'Home', href: '/' },
-    { name: 'Shop All', href: './pages/Shop' },
-    { name: 'Events', href: './pages/Events' },
-    { name: 'About', href: './pages/About' },
+    { name: 'Shop All', href: '../pages/Shop' },
+    { name: 'Events', href: '../pages/Events' },
+    { name: 'About', href: '../page/About' },
   ]
 }
 
@@ -299,14 +311,16 @@ const Nav = () => {
             <div className="ml-4 flex lg:ml-0">
               <h3 className='text-center content-center' 
                   id="logoHeader">Weasel <br /> Games</h3>
-              <Link href="/">
+              <a href="/">
                 <span className="sr-only">Weasel Games</span>
-                <img
+                <Image
                   alt="Weasel Games"
-                  src={"weaselArcherHead.png"}
+                  src={"/weaselArcherHead.png"}
+                  height={100}
+                  width={90}
                   className="w-16 h-20"
                 />
-              </Link>
+              </a>
             </div>
 
       {/* The Main Display popovers - Not Mobile */}

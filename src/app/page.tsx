@@ -1,5 +1,6 @@
 import { auth0 } from "./lib/auth0";
 import Link from 'next/link';
+import Image from 'next/image'
 import { Route, Routes } from "react-router-dom";
 
 import './app.css'
@@ -21,7 +22,7 @@ export default function Home() {
             className="hero min-h-screen"
             style={{
               backgroundImage:
-                  "url(d&d.jpg)",
+                  "url(/d&d.jpg)",
             }}
           >
             <div className="hero-overlay content-center"></div>
@@ -38,19 +39,19 @@ export default function Home() {
                 <button 
                   id="heroBtn" 
                   className="btn mx-1">
-                    <a 
+                    <Link 
                       id="homeButton"
-                      href="/shop">
+                      href="./pages/Shop">
                       CCG Singles Catalog
-                    </a>
+                    </Link>
                   </button>
 
                 <button id="heroBtn" className="btn">
-                  <a
+                  <Link
                     id="homeButton"
-                    href='/events'>
+                    href='./pages/Events'>
                     Events Schedule
-                  </a>
+                  </Link>
                   
                 </button>
 
@@ -78,8 +79,11 @@ export default function Home() {
               <div id="item1" className="flex-wrap rounded-2xl card lg:card-side bg-gray-400 shadow-sm mb-4 md:mx-6">
 
                   <figure>
-                    <img
-                      src={"d&d.jpg"}
+                    <Image
+                      src={"/d&d.jpg"}
+                      alt="dnd image"
+                      height={200}
+                      width={300}
                       className="max-w-sm rounded-lg"/>
                     </figure>
                     <div className="card-body">
@@ -90,11 +94,11 @@ export default function Home() {
                       </p>
 
                       <button id="heroBtn" className="btn">
-                        <a
+                        <Link
                           id="homeButton"
-                          href='/events'>
+                          href='/pages/Events'>
                           Check Events
-                        </a>
+                        </Link>
                     </button>
                     </div>
                 </div>
@@ -104,8 +108,11 @@ export default function Home() {
               <div id="item2" className="flex-wrap rounded-2xl card lg:card-side bg-gray-400 shadow-sm mb-4 md:mx-6">
 
                   <figure>
-                    <img
-                      src={"mtg.jpg"}
+                    <Image
+                      src={"/mtg.jpg"}
+                      alt="mtg image"
+                      height={200}
+                      width={300}
                       className="max-w-sm rounded-lg"/>
                     </figure>
                     <div className="card-body">
@@ -116,11 +123,11 @@ export default function Home() {
                       </p>
 
                       <button id="heroBtn" className="btn">
-                        <a
+                        <Link
                           id="homeButton"
-                          href='#'>
+                          href='/pages/events'>
                           Registration
-                        </a>
+                        </Link>
                     </button>
                     </div>
                 </div>
@@ -129,7 +136,7 @@ export default function Home() {
 
                   <figure>
                     <img
-                      src={"warhammer40k.jpg"}
+                      src={"/warhammer40k.jpg"}
                       className="max-w-sm rounded-lg"/>
                     </figure>
                     <div className="card-body">
@@ -142,7 +149,7 @@ export default function Home() {
                       <button id="heroBtn" className="btn">
                         <a
                           id="homeButton"
-                          href='#'>
+                          href='/pages/Events'>
                           Details
                         </a>
                     </button>
