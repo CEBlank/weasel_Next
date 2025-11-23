@@ -1,4 +1,4 @@
-import { auth0 } from "../lib/auth0";
+import { auth0 } from "app/lib/auth0"
 import { redirect } from "next/navigation";
 
 import { useUser } from "@auth0/nextjs-auth0";
