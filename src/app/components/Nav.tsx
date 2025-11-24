@@ -3,9 +3,9 @@
 //working HeadlessUI for React with NextJS
 import Router from 'next/router';
 import { forwardRef } from 'react'
+
 import { useState } from 'react'
 import Link from 'next/link'
-import React from 'react';
 import Image from 'next/image'
 
 
