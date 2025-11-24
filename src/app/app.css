@@ -192,7 +192,7 @@ h2 {
   color: #572364;
 }
 
-/* Profile Page */
+/* Account Page */
 
 #profileDIV {
   justify-content: center;
@@ -244,4 +244,37 @@ form {
 #userIcon {
   color: #D7E3F4;
   justify-content: center;
+}
+
+/* Cart */
+
+#cart {
+  background-color: #D7E3F4;
+  color: #853A98;
+}
+
+#checkOut {
+  background-color: #853A98;
+  color:#D7E3F4;
+}
+
+#checkOut:hover {
+  color: #4f7aaa;
+}
+
+#removeButton {
+  color: #572364;
+}
+
+#removeButton:hover {
+  color: #4f7aaa;
+}
+
+
+#continueButton {
+  color: #572364;
+}
+
+#continueButton:hover {
+  color: #4f7aaa;
 }

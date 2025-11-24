@@ -171,14 +171,14 @@ const Account = () => {
       
             <div className="flex justify-center border-b border-gray-400 mx-25 mt-5">
 
-                <h2 className="font-semibold border-gray-400">
+                <h2 className="font-semibold border-gray-400 mb-2">
                   Order History
                 </h2>
 
             </div>
             <div
               id="orderHistory" 
-              className="flex justify-center mt-2">
+              className="flex justify-center mt-2 mb-10">
                 <p>You haven't ordered anything yet.</p>
               </div>
     </>

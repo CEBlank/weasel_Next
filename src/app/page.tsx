@@ -42,7 +42,7 @@ export default function Home() {
                   className="btn mx-1">
                     <Link 
                       id="homeButton"
-                      href="./pages/Shop">
+                      href="./pages/shop">
                       CCG Singles Catalog
                     </Link>
                   </button>
@@ -50,7 +50,7 @@ export default function Home() {
                 <button id="heroBtn" className="btn">
                   <Link
                     id="homeButton"
-                    href='./pages/Events'>
+                    href='./pages/events'>
                     Events Schedule
                   </Link>
                   
@@ -97,7 +97,7 @@ export default function Home() {
                       <button id="heroBtn" className="btn">
                         <Link
                           id="homeButton"
-                          href='/pages/Events'>
+                          href='./pages/events'>
                           Check Events
                         </Link>
                     </button>
@@ -126,7 +126,7 @@ export default function Home() {
                       <button id="heroBtn" className="btn">
                         <Link
                           id="homeButton"
-                          href='/pages/events'>
+                          href='./pages/events'>
                           Registration
                         </Link>
                     </button>
@@ -136,8 +136,11 @@ export default function Home() {
                 <div id="item3" className="flex-wrap rounded-2xl card lg:card-side bg-gray-400 shadow-sm mb-4 md:mx-6">
 
                   <figure>
-                    <img
+                    <Image
                       src={"/warhammer40k.jpg"}
+                      alt="Warhammer 40k image"
+                      height={200}
+                      width={300}
                       className="max-w-sm rounded-lg"/>
                     </figure>
                     <div className="card-body">
@@ -150,7 +153,7 @@ export default function Home() {
                       <button id="heroBtn" className="btn">
                         <a
                           id="homeButton"
-                          href='/pages/Events'>
+                          href='./pages/events'>
                           Details
                         </a>
                     </button>

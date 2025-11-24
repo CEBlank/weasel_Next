@@ -57,7 +57,7 @@ const Events = () => {
             </p>
                 <button 
                   id="heroBtn" 
-                  className="btn mx-1 mt-2">
+                  className="btn mx-1 mt-2 mb-3">
                     <a 
                       id="homeButton"
                       href="#">

@@ -3,6 +3,7 @@
 //working HeadlessUI for React with NextJS
 import Router from 'next/router';
 import { forwardRef } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import React from 'react';
 import Image from 'next/image'
@@ -21,6 +22,7 @@ import {
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline';
 
 import authUser from './userAuth';
+import CartDrawer from './Cart';
 //import LoginButton from './LoginButton'
 //import LogoutButton from './LogOutButton'
 
@@ -137,11 +139,11 @@ const navLinks = {
       featured: [
         {
           name: 'All Events',
-          href: './events'
+          href: '../pages/events'
         },
         {
           name: 'Join Our Community',
-          href: './community'
+          href: '../pages/community'
         }
       ],
       sections: [
@@ -182,12 +184,11 @@ const navLinks = {
     { name: 'Home', href: '/' },
     { name: 'Shop All', href: '../pages/shop' },
     { name: 'Events', href: '../pages/events' },
-    { name: 'About', href: '../pages/about' },
   ]
 }
 
 const Nav = () => {
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = useState(false)
 
  // console.log('Nav Loaded')
 
@@ -208,6 +209,7 @@ const Nav = () => {
             className="relative flex w-full max-w-xs transform flex-col overflow-y-auto pb-12 shadow-xl transition duration-300 ease-in-out data-closed:-translate-x-full"
           >
             <div className="flex px-4 pt-5 pb-2">
+              
               <button
                 type="button"
                 onClick={() => setOpen(false)}
@@ -285,8 +287,6 @@ const Nav = () => {
             </div>
 
           </div>
-
-
           
           </DialogPanel>
         </div>
@@ -308,6 +308,7 @@ const Nav = () => {
               <Bars3Icon aria-hidden="true" className="size-6" />
             </button>
 
+
             {/* Logo */}
             <div className="ml-4 flex lg:ml-0">
               <h3 className='text-center content-center' 
@@ -315,6 +316,7 @@ const Nav = () => {
               <a href="/">
                 <span className="sr-only">Weasel Games</span>
                 <Image
+                  loading="eager"
                   alt="Weasel Games"
                   src={"/weaselArcherHead.png"}
                   height={100}
@@ -431,7 +433,10 @@ const Nav = () => {
               </div>
 
               {/* Cart */}
-              <div className="ml-4 flow-root lg:ml-6">
+
+              {CartDrawer()}
+
+{/*               <div className="ml-4 flow-root lg:ml-6">
                 <a id='cart' href="#" className="group -m-2 flex items-center p-2">
                   <ShoppingBagIcon
                     aria-hidden="true"
@@ -440,7 +445,7 @@ const Nav = () => {
                   <span className="ml-2 text-sm font-medium">0</span>
                   <span className="sr-only">items in cart, view bag</span>
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

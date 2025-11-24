@@ -70,7 +70,7 @@ const Home = () => {
 
                   <figure>
                     <img
-                      src={"d&d.jpg"}
+                      src={"/d&d.jpg"}
                       className="max-w-sm rounded-lg"/>
                     </figure>
                     <div className="card-body">
@@ -83,7 +83,7 @@ const Home = () => {
                       <button id="heroBtn" className="btn">
                         <a
                           id="homeButton"
-                          href='/events'>
+                          href='./pages/events'>
                           Check Events
                         </a>
                     </button>
@@ -96,7 +96,7 @@ const Home = () => {
 
                   <figure>
                     <img
-                      src={"mtg.jpg"}
+                      src={"/mtg.jpg"}
                       className="max-w-sm rounded-lg"/>
                     </figure>
                     <div className="card-body">
@@ -120,7 +120,7 @@ const Home = () => {
 
                   <figure>
                     <img
-                      src={"warhammer40k.jpg"}
+                      src={"/warhammer40k.jpg"}
                       className="max-w-sm rounded-lg"/>
                     </figure>
                     <div className="card-body">
