@@ -7,52 +7,91 @@ import { ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
 const products = [
   {
     id: 1,
-    name: 'Throwback Hip Bag',
+    name: 'Dungeons&Dragons: Player Handbook 2024',
     href: '#',
-    color: 'Salmon',
-    price: '$90.00',
-    quantity: 1,
-    imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/shopping-cart-page-04-product-01.jpg',
-    imageAlt: 'Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.',
+    color:"",
+    quantity:"1",
+    price: '$49.99',
+    imageSrc: '#',
+    imageAlt: 'Dungeons and Dragons player handbook 2024 edition.',
   },
   {
     id: 2,
-    name: 'Medium Stuff Satchel',
+    name: 'Root - A Game of Woodland Might and Right',
     href: '#',
-    color: 'Blue',
-    price: '$32.00',
-    quantity: 1,
-    imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/shopping-cart-page-04-product-02.jpg',
-    imageAlt:
-      'Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.',
+    color:"",
+    quantity:"1",
+    price: '$60.00',
+    imageSrc: '#',
+    imageAlt: '#',
   },
   {
     id: 3,
-    name: 'Zip Tote Basket',
+    name: 'Arcadia Quest',
     href: '#',
-    color: 'White and black',
-    price: '$140.00',
-    quantity: 1,
-    imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/shopping-cart-page-04-product-03.jpg',
-    imageAlt: 'Front of zip tote bag with white canvas, black canvas straps and handle, and black zipper pulls.',
+    color:"",
+    quantity:"1",
+    price: '$99.99',
+    imageSrc: '#',
+    imageAlt: '#',
+  },
+  {
+    id: 4,
+    name: 'Pathfinder Bestiary',
+    href: '#',
+    color:"",
+    quantity:"1",
+    price: '$49.99',
+    imageSrc: '#',
+    imageAlt: '#',
+  },
+  {
+    id: 5,
+    name: 'Card Keeper',
+    href: '#',
+    color:"",
+    quantity:"1",
+    price: '$18.00',
+    imageSrc: '#',
+    imageAlt: '#',
+  },
+  {
+    id: 6,
+    name: 'Focus Multi-Pack',
+    href: '#',
+    color:"",
+    quantity:"1",
+    price: '$39.00',
+    imageSrc: '#',
+    imageAlt: 'Stack of 3 small drab green cardboard paper card refill boxes with white text.',
+  },
+  {
+    id: 7,
+    name: 'Monster Manual 2024',
+    href: '#',
+    color:"",
+    quantity:"1",
+    price: '$50.00',
+    imageSrc: '#',
+    imageAlt: '#',
+  },
+  {
+    id: 8,
+    name: 'Focus Carry Pouch',
+    href: '#',
+    color:"",
+    quantity:"1",
+    price: '$32.00',
+    imageSrc: '#',
+    imageAlt: 'Textured gray felt pouch for paper cards with snap button flap and elastic pen holder loop.',
   },
 ]
+
 
 export default function CartDrawer() {
   const [open, setOpen] = useState(false)
 
   return (
-
-/*                   <div className="ml-4 flow-root lg:ml-6">
-                <a id='cart' href="#" className="group -m-2 flex items-center p-2">
-                  <ShoppingBagIcon
-                    aria-hidden="true"
-                    className="size-6 shrink-0"
-                  />
-                  <span className="ml-2 text-sm font-medium">0</span>
-                  <span className="sr-only">items in cart, view bag</span>
-                </a>
-              </div> */
 
     <div>
 
