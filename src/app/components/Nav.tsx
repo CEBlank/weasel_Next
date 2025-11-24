@@ -23,7 +23,7 @@ import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@her
 
 import authUser from './userAuth';
 import CartDrawer from './Cart';
-import MenuHome from './Menu';
+
 //import LoginButton from './LoginButton'
 //import LogoutButton from './LogOutButton'
 
