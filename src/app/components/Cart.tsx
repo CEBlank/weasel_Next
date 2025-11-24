@@ -141,6 +141,17 @@ export default function CartDrawer() {
                     <div className="mt-8">
                       <div className="flow-root">
                         <ul role="list" className="-my-6 divide-y divide-gray-200">
+                          <li
+                            className='text-gray-400'
+                            >
+                              There's nothing in your cart</li>
+                        </ul>
+                      </div>
+                    </div> 
+
+{/*                     <div className="mt-8">
+                      <div className="flow-root">
+                        <ul role="list" className="-my-6 divide-y divide-gray-200">
                           {products.map((product) => (
                             <li key={product.id} className="flex py-6">
                               <div className="size-24 shrink-0 overflow-hidden rounded-md border">
@@ -174,13 +185,13 @@ export default function CartDrawer() {
                           ))}
                         </ul>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
                     <div className="flex justify-between text-base font-medium text-gray-900">
                       <p>Subtotal</p>
-                      <p>$262.00</p>
+                      <p>$0.00</p>
                     </div>
                     <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
                     <div className="mt-6">

@@ -23,6 +23,7 @@ import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@her
 
 import authUser from './userAuth';
 import CartDrawer from './Cart';
+import MenuHome from './Menu';
 //import LoginButton from './LoginButton'
 //import LogoutButton from './LogOutButton'
 
@@ -194,6 +195,8 @@ const Nav = () => {
 
   return(
     <div id='topDiv' className='bg-dark'>
+
+
       <Dialog 
         open={open} 
         onClose={setOpen} 
@@ -329,6 +332,15 @@ const Nav = () => {
       {/* The Main Display popovers - Not Mobile */}
             <PopoverGroup className='hidden lg:ml-8 lg:block lg:self-stretch'>
               <div id="navPanel" className='flex h-full space-x-8 md:flex'>
+
+                {navLinks.pages.map((page) => (
+                  <Link id='pages' key={page.name}
+                  href={page.href}
+                  className='flex items-center text-sm font-medium'>
+                    {page.name}
+                  </Link>
+                ))}
+
                 {navLinks.categories.map((category) => (
                   <Popover key={category.name} className='flex' >
                     <div className='relative flex' >
@@ -390,13 +402,6 @@ const Nav = () => {
                         </div>
                       </PopoverPanel>
                   </Popover>
-                ))}
-                {navLinks.pages.map((page) => (
-                  <Link id='pages' key={page.name}
-                  href={page.href}
-                  className='flex items-center text-sm font-medium'>
-                    {page.name}
-                  </Link>
                 ))}
               </div>
             </PopoverGroup>

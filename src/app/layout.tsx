@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 import Nav from "./components/Nav";
 import Footing from "./components/Footer";
-import MenuHome from "./components/Menu";
+
 
 /* 
 import Account from "./pages/account/page";
@@ -34,7 +34,6 @@ export default function RootLayout({
     <html lang="en">
 
           <body>
-         {/*      <MenuHome /> */}
               <Nav />
               <Auth0Provider>
                 {children}

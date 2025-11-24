@@ -1,10 +1,9 @@
 "use client";
 
-//import './envConfig.ts'
 import Link from "next/link";
 
 export default function LoginButton() {
-
+  
   return (
 
   <div
@@ -12,13 +11,13 @@ export default function LoginButton() {
       className="flex">  
       <div
         className="mx-3">
-          <Link 
+          <a
             className="text-sm"
             id="logInOut"
-            href="/auth/login"
+            href="auth/login"
             >
               Login
-          </Link> 
+          </a> 
       </div>
   </div>
 
