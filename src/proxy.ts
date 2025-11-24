@@ -1,30 +1,10 @@
-import { NextRequest, NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
+import { NextResponse } from "next/server";
 import { auth0 } from "./app/lib/auth0";
 
 export async function proxy(request: NextRequest) {
-  const authRes = await auth0.middleware(request);
-
-    // authentication routes — let the middleware handle it
-    if (request.nextUrl.pathname.startsWith("/auth")) {
-        return authRes;
-    }
-
-    // public routes — no need to check for session
-    if (request.nextUrl.pathname === ("/")) {
-        return authRes;
-    }
-
-    const { origin } = new URL(request.url)
-    const session = await auth0.getSession()
-
-    // user does not have a session — redirect to login
-    if (!session) {
-        return NextResponse.redirect(`${origin}/auth/login`)
-    }
-
-    return authRes
+  return await auth0.middleware(request);
 }
-
 
 export const config = {
   matcher: [
