@@ -7,7 +7,6 @@ import Link from 'next/link';
 import Nav from "./components/Nav";
 import Footing from "./components/Footer";
 
-
 /* 
 import Account from "./pages/account/page";
 import HomePage from "./Home";
