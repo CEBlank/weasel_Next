@@ -1,0 +1,7 @@
+{
+  "AUTH0_DOMAIN" : "dev-ug4olss0uf5d2qw0.us.auth0.com",
+  "AUTH0_CLIENT_ID" : "dR8CFGtMryQoFFVYIZ6bZoGk1tqzZwJ0",
+  "AUTH0_CLIENT_SECRET" : "L889bTcjRRshKWfI6ZiQvsMsZW_fQQ83R7mP_XzoM_OjXMK_zcEuAvr8Bu-IPryQ",
+  "AUTH0_SECRET" : "e657654887ff10a363801274b04dd04869f9d3a7a7e4c02aa552512524e74e7c",
+  "APP_BASE_URL" : "https://localhost/3000"
+}
