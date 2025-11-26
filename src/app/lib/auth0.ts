@@ -1,5 +1,4 @@
 import { Auth0Client } from "@auth0/nextjs-auth0/server";
-//import { AUTH0_DOMAIN, AUTH0_CLIENT_ID, AUTH0_CLIENT_SECRET, APP_BASE_URL, AUTH0_SECRET } from "./auth0.json"
 
 
 // Initialize the Auth0 client 
