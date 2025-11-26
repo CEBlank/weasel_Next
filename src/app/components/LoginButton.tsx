@@ -1,5 +1,8 @@
 "use client";
 
+
+import { auth0 } from "../lib/auth0"
+import { redirect } from "next/navigation";
 //import Link from "next/link";
 
 
