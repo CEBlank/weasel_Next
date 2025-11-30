@@ -1,5 +1,16 @@
 "use client"
 
+const Account = () => {
+  
+
+  return (
+    <>
+    Account Page
+    </>
+  )
+}
+export default Account;
+
 /* import { useUser } from "@auth0/nextjs-auth0";
 import { PhotoIcon } from "@heroicons/react/24/outline";
 import LoginButton from "app/components/LoginButton";
