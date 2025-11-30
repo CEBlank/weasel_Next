@@ -1,32 +1,45 @@
 "use client"
 
-import { useUser } from "@auth0/nextjs-auth0";
+import {
+  ClerkProvider,
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from '@clerk/nextjs';
+
+//import { useUser } from "@auth0/nextjs-auth0";
 
 //import { auth0 } from "../lib/auth0";
 //import { redirect } from "next/navigation";
 
-import LoginButton from "./LoginButton";
-import LogoutButton from "./LogOutButton";
+//import LoginButton from "./LoginButton";
+//import LogoutButton from "./LogOutButton";
 //import Link from "next/link";
 
 
 export default function authUser() {
-  const { user } = useUser();
+//  const { user } = useUser();
 
 //  console.log("user everything: ", user);
   
   return (
-        
-    user ? (
-          <div id="profileRoute"
-            className="flex">  
-              <LogoutButton />
-          </div>
-    ) : 
-      <div>
-      <LoginButton />
-      </div>
-          
+  <>   
+      <ClerkProvider>
+        <SignedOut>
+          <SignInButton />
+          <SignUpButton>
+            <a className="text-1xl">
+              Sign Up
+            </a>
+          </SignUpButton>
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+      </ClerkProvider>
+  </>
   );
 };
 
