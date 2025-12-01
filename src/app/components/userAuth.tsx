@@ -10,10 +10,8 @@ import {
 } from '@clerk/nextjs';
 
 //import { useUser } from "@auth0/nextjs-auth0";
-
 //import { auth0 } from "../lib/auth0";
 //import { redirect } from "next/navigation";
-
 //import LoginButton from "./LoginButton";
 //import LogoutButton from "./LogOutButton";
 //import Link from "next/link";
