@@ -1,4 +1,3 @@
-import { auth0 } from "./lib/auth0";
 import Link from 'next/link';
 import Image from 'next/image'
 import { Route, Routes } from "react-router-dom";

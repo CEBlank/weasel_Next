@@ -1,6 +1,13 @@
-import type { Metadata } from "next";
-import { Auth0Provider } from "@auth0/nextjs-auth0/client";
-import './app.css'
+import { type Metadata } from 'next'
+import {
+  ClerkProvider,
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from '@clerk/nextjs';
+import './globals.css';
 
 import Link from 'next/link';
 
@@ -32,14 +39,14 @@ export default function RootLayout({
   return (
     <html lang="en">
 
-          <body>
-              <Nav />
-              <Auth0Provider>
-                {children}
-              </Auth0Provider>
-              <Footing />
-          </body>
+    <body>
+        <Nav />
+
+        {children}
+            
+        <Footing />
+      </body>
 
     </html>
   );
-}
+} 
