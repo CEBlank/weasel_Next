@@ -21,7 +21,6 @@ export const fetchCache = "force-no-store";
 
 export default function authUser() {
 
-
 //const clerkPublicKey = "pk_live_Y2xlcmsud2Vhc2VsZ2FtZXMuYXBwJA"
 
 //  const { user } = useUser();
