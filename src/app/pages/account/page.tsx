@@ -11,7 +11,7 @@ const Account = () => {
 
 return(
   <>
-    <UserProfile />
+    
   </>
 
 )

@@ -1,4 +1,4 @@
-"use client"
+//this is my SERVER COMPONENT to getUser and pass props to Account CLIENT COMPONENT
 
 import { NextResponse, NextRequest } from 'next/server'
 import { auth } from '@clerk/nextjs/server'
