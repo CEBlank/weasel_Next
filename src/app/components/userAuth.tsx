@@ -7,14 +7,13 @@ import {
   SignedIn,
   SignedOut,
   UserButton,
+  UserProfile,
 } from '@clerk/nextjs';
+//import Account from 'app/pages/account/page';
 
-//import { useUser } from "@auth0/nextjs-auth0";
-//import { auth0 } from "../lib/auth0";
 //import { redirect } from "next/navigation";
-//import LoginButton from "./LoginButton";
-//import LogoutButton from "./LogOutButton";
-//import Link from "next/link";
+import Link from "next/link";
+
 
 export const dynamic = "force-dynamic";
 export const fetchCache = "force-no-store";
@@ -33,13 +32,19 @@ export default function authUser() {
         <SignedOut>
           <SignInButton />
           <SignUpButton>
-            <a className="text-1xl">
+            <a id="homeButton" className="text-1xl">
               Sign Up
             </a>
           </SignUpButton>
         </SignedOut>
         <SignedIn>
           <UserButton />
+          <a 
+            href="../pages/Account"
+            id="homeButton" 
+            className="text-1xl">
+              Account
+            </a>
         </SignedIn>
       </ClerkProvider>
   </>
