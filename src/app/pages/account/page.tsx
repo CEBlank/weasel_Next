@@ -1,9 +1,34 @@
 "use client"
 
-import { auth0 } from "app/lib/auth0"
-import { redirect } from "next/navigation";
+import { NextResponse, NextRequest } from 'next/server'
+import { auth, clerkClient } from '@clerk/nextjs/server'
 
-import { useUser } from "@auth0/nextjs-auth0";
+/* export async function POST(req: NextRequest) {
+  const { userId } = await auth()
+
+  if (!userId) return NextResponse.redirect(new URL('/sign-in', req.url))
+
+  const params = { firstName: 'John', lastName: 'Wick' }
+
+  const client = await clerkClient()
+
+  const user = await client.users.updateUser(userId, params)
+
+  return NextResponse.json({ user })
+} */
+
+const Account = () => {
+  
+
+  return (
+    <>
+    Account Page
+    </>
+  )
+}
+export default Account;
+
+/* import { useUser } from "@auth0/nextjs-auth0";
 import { PhotoIcon } from "@heroicons/react/24/outline";
 import LoginButton from "app/components/LoginButton";
 
@@ -29,7 +54,7 @@ const Account = () => {
 
   return (
       <>
-
+ */
     {/* Auth provided block */}
 
 {/*       <div className="profile-card action-card">
@@ -50,7 +75,7 @@ const Account = () => {
         
       {/* Form Block */}
 
-              <form 
+/*               <form 
           className="flex justify-center mt-2"
           id="profileForm">
           <div>
@@ -94,10 +119,10 @@ const Account = () => {
                       className="block text-sm/6 font-medium">
                       Profile Picture
                     </label>
-                    <div className="mt-2 flex justify-start gap-x-3">
+                    <div className="mt-2 flex justify-start gap-x-3"> */
 
                  {/* Put the user pfp here */}
-
+/* 
                   <img 
                     id="pfp"
                     src={user.picture || `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='110' height='110' viewBox='0 0 110 110'%3E%3Ccircle cx='55' cy='55' r='55' fill='%2363b3ed'/%3E%3Cpath d='M55 50c8.28 0 15-6.72 15-15s-6.72-15-15-15-15 6.72-15 15 6.72 15 15 15zm0 7.5c-10 0-30 5.02-30 15v3.75c0 2.07 1.68 3.75 3.75 3.75h52.5c2.07 0 3.75-1.68 3.75-3.75V72.5c0-9.98-20-15-30-15z' fill='%23fff'/%3E%3C/svg%3E`} 
@@ -106,12 +131,12 @@ const Account = () => {
                       const target = e.target as HTMLImageElement;
                       target.src = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='110' height='110' viewBox='0 0 110 110'%3E%3Ccircle cx='55' cy='55' r='55' fill='%2363b3ed'/%3E%3Cpath d='M55 50c8.28 0 15-6.72 15-15s-6.72-15-15-15-15 6.72-15 15 6.72 15 15 15zm0 7.5c-10 0-30 5.02-30 15v3.75c0 2.07 1.68 3.75 3.75 3.75h52.5c2.07 0 3.75-1.68 3.75-3.75V72.5c0-9.98-20-15-30-15z' fill='%23fff'/%3E%3C/svg%3E`;
                     }}
-                  />
+                  /> */
 
                   {/*   <UserCircleIcon 
                         aria-hidden="true" 
                         className="size-12" 
-                        id="photoIcon"/> */}
+                        id="photoIcon"/> */}/* 
                     </div>
 
                     <div className="col-span-full">
@@ -146,10 +171,10 @@ const Account = () => {
                   </div>
 
                 </div>
-
+ */
 
                 {/* Form Buttons!!!! Need a backend! */}
-              <div className="mt-6 flex justify-between gap-x-6 mb-2">
+         /*      <div className="mt-6 flex justify-between gap-x-6 mb-2">
                 <button 
                   id="cancelBtn"
                   type="button" 
@@ -186,4 +211,4 @@ const Account = () => {
   );
 };
 
-export default Account;
+export default Account; */
