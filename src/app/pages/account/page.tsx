@@ -8,10 +8,11 @@ export const fetchCache = "force-no-store";
 
 const Account = () => {
 
+  
 
 return(
   <>
-    
+    Account Page
   </>
 
 )
