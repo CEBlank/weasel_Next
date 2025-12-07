@@ -32,7 +32,10 @@ export default function authUser() {
 
   return (
   <>   
-      <ClerkProvider>
+      <ClerkProvider
+        appearance={{
+          cssLayerName: 'clerk',
+        }}>
 
           <SignedOut>
           <SignInButton />

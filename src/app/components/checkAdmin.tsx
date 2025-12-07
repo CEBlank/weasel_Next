@@ -48,7 +48,7 @@ const CustomUserButton = () => {
               <UserButton.Link
                 label="Profile"
                 labelIcon={<DotIcon />}
-                href="./pages/account"
+                href="https://accounts.weaselgames.app/user"
               />
 
 
