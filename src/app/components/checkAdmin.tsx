@@ -23,8 +23,6 @@ const DotIcon = () => {
 }
 
 
-
-
 const CustomUserButton = () => {
   const { isLoaded } = useAuth()
 
