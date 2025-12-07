@@ -13,7 +13,7 @@ import {
 
 //import { redirect } from "next/navigation";
 //import Link from "next/link";
-import CustomUserButton from './checkAdmin';
+//import CustomUserButton from './checkAdmin';
 
 
 export const dynamic = "force-dynamic";
@@ -33,7 +33,7 @@ export default function authUser() {
   <>   
       <ClerkProvider>
 
-        <CustomUserButton />
+      
 
         <SignedOut>
           <SignInButton />
