@@ -1,34 +1,48 @@
-/* import { useAuth0 } from "@auth0/auth0-react";
-import { Admin_Role_ID } from '../auth0.config.json';
+import { useAuth, UserButton, UserProfile } from "@clerk/nextjs"
 
-
-export function AdminPortal() {
-const { user, isAuthenticated } = useAuth0();
-
-const checkAdmin = () => {
-  
-  
-
-
+const DotIcon = () => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+      <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
+    </svg>
+  )
 }
 
+const CustomPage = () => {
   return (
-    isAuthenticated && user ? (
-      <div
-        id="profileRoute"
-        className="flex">  
-        <div
-          className="mx-3">
-          <a 
-            href="/Admin"
-            id="userIcon">
-                Admin
-          </a> 
-        </div>
-        
-      </div>
-    ) :null
-  );
-};
+    <div>
+      <h1>Custom page</h1>
+      <p>This is the content of the custom page.</p>
+    </div>
+  )
+}
 
- */
+const CustomUserButton = () => {
+  const { has, isLoaded } = useAuth()
+
+  if (!isLoaded) {
+    return <span>Loading...</span>
+  }
+
+  const isAdmin = has({ permission: 'org:app:admin' })
+
+  return (
+    <footer>
+
+      <UserButton>
+        {isAdmin && (
+          <UserButton.MenuItems>
+            <UserButton.Link
+              label="Create organization"
+              labelIcon={<DotIcon />}
+              href="./AdminPages/admin"
+            />
+          </UserButton.MenuItems>
+        )}
+      </UserButton>
+      
+    </footer>
+  )
+}
+
+export default CustomUserButton
