@@ -199,7 +199,11 @@ h2 {
 }
 
 #authDIV {
-  color: #D7E3F4;
+  background-color:#c595d1 ;
+  padding: 4px;
+  border:3px solid #572364 ;
+  border-bottom-right-radius: 80%;
+  border-top-right-radius: 80%;
 }
 
 #pfp {

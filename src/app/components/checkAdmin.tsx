@@ -51,8 +51,6 @@ const CustomUserButton = () => {
                 href="https://accounts.weaselgames.app/user"
               />
 
-
-
             {isAdmin &&
             (
                 <UserButton.Link
