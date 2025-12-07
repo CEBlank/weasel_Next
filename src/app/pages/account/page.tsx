@@ -51,7 +51,7 @@ export default function Account() {
                     <div key={email.id} className="flex gap-2 mb-1">
                       Email: {email.emailAddress}
                       {user.primaryEmailAddressId === email.id && (
-                        <span className="text-xs bg-primary-50 text-primary-700 rounded-2xl px-2 font-medium pt-[2px]">
+                        <span className="text-xs bg-primary-50 text-primary-700 rounded-2xl px-2 font-medium">
                           Primary
                         </span>
                       )}

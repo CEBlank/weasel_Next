@@ -13,6 +13,7 @@ import Link from 'next/link';
 
 import Nav from "./components/Nav";
 import Footing from "./components/Footer";
+import Admin from './pages/admin/page';
 
 /* 
 import Account from "./pages/account/page";
@@ -45,7 +46,10 @@ export default function RootLayout({
         
           {children}
             
-          <Footing />
+          <Footing /> 
+
+          <Admin />
+
         </ClerkProvider>
         
       </body>
