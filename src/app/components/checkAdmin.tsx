@@ -30,13 +30,37 @@ const DotIcon = () => {
 const CustomUserButton = () => {
   const { user, isLoaded} = useUser()
 
-  //if (isLoaded){
-    //need to figure out how to get to actual admin roles already set (still not working after following guides)
-    //const isAdmin = 
+    //hard code it for testing only
+    const adminID = 'user_36DunqSRu2Afx58qQG8cYzHZbTZ';
+  
+  if (user.id = adminID) {
+    return (
+    <>
+  
+      <div id="authDIV">
 
-  //  console.log("role Member", isMember);
-  //  console.log("role admin", isAdmin);
- // } 
+        <UserButton showName>
+
+          <UserButton.MenuItems>
+              <UserButton.Link
+                label="Account"
+                labelIcon={<DotIcon />}
+                href="./pages/account"
+              />
+
+              <UserButton.Link
+                label="Admin"
+                labelIcon={<DotIcon />}
+                href="./pages/admin"
+              />
+          
+          </UserButton.MenuItems>
+        </UserButton>
+      </div>
+
+    </>
+  )
+  }
 
   if (!isLoaded) {
     return <span>Loading...</span>
