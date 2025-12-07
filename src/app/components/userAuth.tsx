@@ -28,14 +28,6 @@ const DotIcon = () => {
 }
 
 export default function authUser() {
-/*   const { has, isLoaded } = useAuth();
-
-    if(!isLoaded) {
-      return <span>Loading...</span>
-    }
-
-    
-      const isAdmin = has({ permission: 'org:app:admin' }) */
 
   return (
   <>   

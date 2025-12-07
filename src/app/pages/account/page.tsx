@@ -6,7 +6,7 @@ import { UserProfile } from "@clerk/nextjs"
 export const dynamic = "force-dynamic";
 export const fetchCache = "force-no-store";
 
-const DotIcon = () => {
+/* const DotIcon = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
       <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
@@ -21,17 +21,17 @@ const CustomPage = () => {
       <p>This is the content of the custom page.</p>
     </div>
   )
-}
+} */
 
-const UserProfilePage = () => (
-  <UserProfile path="/user-profile" routing="path">
+/* const UserProfilePage = () => (
+  <UserProfile path="/user-profile" routing="path"> */
     {/* You can pass the content as a component */}
-    <UserProfile.Page label="Custom Page" labelIcon={<DotIcon />} url="custom-page">
+    {/* <UserProfile.Page label="Custom Page" labelIcon={<DotIcon />} url="custom-page">
       <CustomPage />
-    </UserProfile.Page>
+    </UserProfile.Page> */}
 
     {/* You can also pass the content as direct children */}
-    <UserProfile.Page label="Terms" labelIcon={<DotIcon />} url="terms">
+    {/* <UserProfile.Page label="Terms" labelIcon={<DotIcon />} url="terms">
       <div>
         <h1>Custom Terms Page</h1>
         <p>This is the content of the custom terms page.</p>
@@ -40,7 +40,7 @@ const UserProfilePage = () => (
   </UserProfile>
 )
 
-export default UserProfilePage
+export default UserProfilePage */}
 
 
 
