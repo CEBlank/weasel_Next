@@ -40,11 +40,15 @@ export default function RootLayout({
     <html lang="en">
 
     <body>
+        <ClerkProvider>
+        
         <Nav />
 
         {children}
             
         <Footing />
+
+        </ClerkProvider>
       </body>
 
     </html>

@@ -1,6 +1,6 @@
 //Hey, this is a SERVER component!
 
-import { useAuth, UserButton } from "@clerk/nextjs"
+import { useAuth, UserButton, useUser } from "@clerk/nextjs"
 import { checkRole } from "app/utils/roles"
 import { redirect } from "next/navigation"
 
@@ -24,12 +24,11 @@ const DotIcon = () => {
 }
 
 
-
-
 const CustomUserButton = () => {
-
+  const { user } = useUser()
   const { isLoaded } = useAuth()
 
+  console.log(user)
 
   if (!isLoaded) {
     return <span>Loading...</span>
