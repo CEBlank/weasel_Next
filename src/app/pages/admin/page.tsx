@@ -3,7 +3,7 @@ import { Protect } from '@clerk/nextjs'
 
 export default function Admin() {
 
-
+//role org:admin works, permissions org:admin did not... Progress!
 
   return (
     <Protect
