@@ -9,6 +9,7 @@ import {
   UserButton,
   useAuth,
 } from '@clerk/nextjs';
+import CustomUserButton from './checkAdmin';
 //import Account from 'app/pages/account/page';
 
 //import { redirect } from "next/navigation";
@@ -33,9 +34,7 @@ export default function authUser() {
   <>   
       <ClerkProvider>
 
-      
-
-        <SignedOut>
+          <SignedOut>
           <SignInButton />
           <SignUpButton>
             <a id="homeButton" className="text-1xl">
@@ -46,9 +45,7 @@ export default function authUser() {
 
         <SignedIn>
 
-        <UserButton  
-          showName >
-        </UserButton>
+        <CustomUserButton />
 
         </SignedIn>
 

@@ -1,4 +1,15 @@
-import { useAuth, UserButton, UserProfile } from "@clerk/nextjs"
+import { useAuth, UserButton } from "@clerk/nextjs"
+
+import Account from "app/pages/account/page"
+
+{/* 
+  https://accounts.weaselgames.app/sign-in
+  https://accounts.weaselgames.app/sign-up
+  https://accounts.weaselgames.app/user
+  https://accounts.weaselgames.app/unauthorized-sign-in
+  https://accounts.weaselgames.app/organization - don't need
+  https://accounts.weaselgames.app/create-organization - don't need
+  */}
 
 const DotIcon = () => {
   return (
@@ -27,21 +38,34 @@ const CustomUserButton = () => {
   const isAdmin = has({ permission: 'org:app:admin' })
 
   return (
-    <footer>
+    <>
+    
+      <div id="authDIV">
 
-      <UserButton>
-        {isAdmin && (
+        <UserButton showName>
+
           <UserButton.MenuItems>
-            <UserButton.Link
-              label="Create organization"
-              labelIcon={<DotIcon />}
-              href="./AdminPages/admin"
-            />
+              <UserButton.Link
+                label="Profile"
+                labelIcon={<DotIcon />}
+                href="./pages/account"
+              />
+
+
+
+            {isAdmin &&
+            (
+                <UserButton.Link
+                  label="Admin Only"
+                  labelIcon={<DotIcon />}
+                  href="./pages/admin"
+                />
+            )}
+
           </UserButton.MenuItems>
-        )}
-      </UserButton>
-      
-    </footer>
+        </UserButton>
+      </div>
+    </>
   )
 }
 
