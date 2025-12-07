@@ -48,7 +48,6 @@ export default function RootLayout({
             
           <Footing /> 
 
-          <Admin />
 
         </ClerkProvider>
         
