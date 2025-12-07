@@ -1,7 +1,8 @@
 //Hey, this is a SERVER component!
 
 import { useAuth, UserButton } from "@clerk/nextjs"
-import AdminCheck from "./getUserRole"
+import { checkRole } from "app/utils/roles"
+import { redirect } from "next/navigation"
 
 //import Account from "app/pages/account/page"
 
@@ -23,15 +24,16 @@ const DotIcon = () => {
 }
 
 
+
+
 const CustomUserButton = () => {
+
   const { isLoaded } = useAuth()
 
 
   if (!isLoaded) {
     return <span>Loading...</span>
   }
-
-  //const isAdmin = has({ feature: 'admin' })
 
   return (
     <>
@@ -42,9 +44,9 @@ const CustomUserButton = () => {
 
           <UserButton.MenuItems>
               <UserButton.Link
-                label="Profile"
+                label="Account"
                 labelIcon={<DotIcon />}
-                href="https://accounts.weaselgames.app/user"
+                href="./pages/account"
               />
           
           </UserButton.MenuItems>
