@@ -1,7 +1,7 @@
 //Hey, this is a SERVER component!
 
 import { useAuth, UserButton } from "@clerk/nextjs"
-import { checkRole } from "app/utils/roles"
+import AdminCheck from "./getUserRole"
 
 //import Account from "app/pages/account/page"
 
@@ -26,10 +26,7 @@ const DotIcon = () => {
 const CustomUserButton = () => {
   const { isLoaded } = useAuth()
 
-/*   if(checkRole('admin')){
-    return <span>Admin Role</span>
-  }
- */
+
   if (!isLoaded) {
     return <span>Loading...</span>
   }
@@ -49,16 +46,7 @@ const CustomUserButton = () => {
                 labelIcon={<DotIcon />}
                 href="https://accounts.weaselgames.app/user"
               />
-
-{/*           {isAdmin &&
-            (
-                <UserButton.Link
-                  label="Admin Only"
-                  labelIcon={<DotIcon />}
-                  href="./pages/admin"
-                />
-            )}  */}
-
+          
           </UserButton.MenuItems>
         </UserButton>
       </div>
