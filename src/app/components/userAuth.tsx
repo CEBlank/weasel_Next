@@ -24,18 +24,11 @@ export const fetchCache = "force-no-store";
 
 
 export default function authUser() {
-  const { isSignedIn } = useUser()
+  //const { isSignedIn } = useUser()
 
-  if (!isSignedIn) {
-    return <SignIn />
-  }
 
   return (
   <>   
-
-    <CustomUserButton />
-
-      {/* <ClerkProvider>
 
           <SignedOut>
           <SignInButton />
@@ -52,7 +45,7 @@ export default function authUser() {
 
         </SignedIn>
 
-      </ClerkProvider> */}
+      
   </>
   );
 };

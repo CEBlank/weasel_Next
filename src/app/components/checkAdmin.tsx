@@ -1,6 +1,9 @@
 //Hey, this is a SERVER component!
 
-import { useAuth, UserButton, useUser } from "@clerk/nextjs"
+import { UserButton, useUser } from "@clerk/nextjs"
+import { getAuth } from "@clerk/nextjs/server"
+import type { NextApiRequest, NextApiResponse } from 'next'
+
 import { checkRole } from "app/utils/roles"
 import { redirect } from "next/navigation"
 
@@ -25,10 +28,15 @@ const DotIcon = () => {
 
 
 const CustomUserButton = () => {
-  const { user } = useUser()
-  const { isLoaded } = useAuth()
+  const { user, isLoaded} = useUser()
 
-  console.log(user)
+  //if (isLoaded){
+    //need to figure out how to get to actual admin roles already set (still not working after following guides)
+    //const isAdmin = 
+
+  //  console.log("role Member", isMember);
+  //  console.log("role admin", isAdmin);
+ // } 
 
   if (!isLoaded) {
     return <span>Loading...</span>
@@ -36,7 +44,7 @@ const CustomUserButton = () => {
 
   return (
     <>
-    
+  
       <div id="authDIV">
 
         <UserButton showName>
@@ -51,6 +59,7 @@ const CustomUserButton = () => {
           </UserButton.MenuItems>
         </UserButton>
       </div>
+
     </>
   )
 }

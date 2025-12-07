@@ -2,10 +2,6 @@
 
 //import { auth } from '@clerk/nextjs/'
 import { useAuth, UserButton, useUser } from "@clerk/nextjs"
-//import { useState } from "react";
-
-import Toggle from "app/components/Toggle";
-import JSONOutput from "app/components/JSONOutput";
 
 
 import { PhotoIcon } from "@heroicons/react/24/outline";
@@ -16,8 +12,20 @@ export const fetchCache = "force-no-store";
 
 export default function Account() {
   const { isLoaded, user } = useUser();
-  //const { isLoaded } = useAuth();
-  //const [jsonOutput, setJsonOutput] = useState(false); //see if we need this useState
+
+/* 
+    if (isLoaded){
+    const roleData = user.organizationMemberships;
+    const roleAssigned = user.publicMetadata;
+
+    const isAdmin = user.createOrganizationEnabled;
+
+    console.log("user json", user);
+    console.log("role data", roleData);
+    console.log("role assigned", roleAssigned);
+    console.log("role admin", isAdmin);
+  }  */
+
 
   return (
   <div>
@@ -31,12 +39,17 @@ export default function Account() {
               <h2 className="font-semibold border-b border-gray-400">
                 Account Details
               </h2>
-
+                  <span>
+                    <a 
+                      href="https://accounts.weaselgames.app/user">
+                      Manage Account
+                    </a>
+                  </span>
                 <div className="mt-5 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                   <div className="sm:col-span-4">
                   {user.emailAddresses.map((email) => (
                     <div key={email.id} className="flex gap-2 mb-1">
-                      {email.emailAddress}
+                      Email: {email.emailAddress}
                       {user.primaryEmailAddressId === email.id && (
                         <span className="text-xs bg-primary-50 text-primary-700 rounded-2xl px-2 font-medium pt-[2px]">
                           Primary
@@ -57,6 +70,7 @@ export default function Account() {
                       id="profileLabel">
                       Name: {user.fullName}
                     </label>
+                    <br />
 
                   </div>
 
@@ -80,6 +94,7 @@ export default function Account() {
                     }}
                   />
 
+
                   {/*   <UserCircleIcon 
                         aria-hidden="true" 
                         className="size-12" 
@@ -94,26 +109,30 @@ export default function Account() {
 
         </form>
     
-        <div className="flex justify-center border-b border-gray-400 mx-25 mt-5">
+        <div className="flex justify-center border-b border-gray-400 mx-25 mt-5 ">
             <h2 className="font-semibold border-gray-400">
               Order History
             </h2>
         </div>
         <div
           id="orderHistory" 
-          className="flex justify-center mt-2">
+          className="flex justify-center mt-2 mb-50">
             <p>You haven't ordered anything yet.</p>
+            <br />
+            <br />
           </div>
 
       </div>
 
 
     ) : (
-        <div className="flex justify-center border-b border-gray-400 mx-25 mt-5">
+        <div className="flex justify-center border-b border-gray-400 mx-25 mt-5 mb-20">
             <h2 className="font-semibold border-gray-400">
               Loading...
             </h2>
+            <br />
         </div>
+        
     )
   }
   </div>

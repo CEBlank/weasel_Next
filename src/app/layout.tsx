@@ -41,14 +41,13 @@ export default function RootLayout({
 
     <body>
         <ClerkProvider>
+          <Nav />
         
-        <Nav />
-
-        {children}
+          {children}
             
-        <Footing />
-
+          <Footing />
         </ClerkProvider>
+        
       </body>
 
     </html>
