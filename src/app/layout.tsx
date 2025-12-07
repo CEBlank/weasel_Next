@@ -21,7 +21,7 @@ import Shop from "./pages/shop/page";
 import Events from "./pages/events/page";
 import About from "./pages/about/page";
 import Community from "./pages/community/page";
-import Admin from "./AdminPages/admin/page"; 
+import Admin from "./pages/admin/page"; 
 */
 
 

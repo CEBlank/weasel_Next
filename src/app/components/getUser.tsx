@@ -1,10 +1,26 @@
-//this is my SERVER COMPONENT to getUser and pass props to Account CLIENT COMPONENT
+'use client'
 
-import { NextResponse, NextRequest } from 'next/server'
-import { auth } from '@clerk/nextjs/server'
+import { usePathname, useRouter } from 'next/navigation'
 
-export default async function Page() {
-  await auth.protect();
+export const SearchUsers = () => {
+  const router = useRouter()
+  const pathname = usePathname()
 
-  return <h1>Protected</h1>;
+  return (
+    <div>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault()
+          const form = e.currentTarget
+          const formData = new FormData(form)
+          const queryTerm = formData.get('search') as string
+          router.push(pathname + '?search=' + queryTerm)
+        }}
+      >
+        <label htmlFor="search">Search for users</label>
+        <input id="search" name="search" type="text" />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  )
 }

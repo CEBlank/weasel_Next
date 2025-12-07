@@ -1,6 +1,9 @@
-import { useAuth, UserButton } from "@clerk/nextjs"
+//Hey, this is a SERVER component!
 
-import Account from "app/pages/account/page"
+import { useAuth, UserButton } from "@clerk/nextjs"
+import { checkRole } from "app/utils/roles"
+
+//import Account from "app/pages/account/page"
 
 {/* 
   https://accounts.weaselgames.app/sign-in
@@ -13,29 +16,27 @@ import Account from "app/pages/account/page"
 
 const DotIcon = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#853A98">
       <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
     </svg>
   )
 }
 
-const CustomPage = () => {
-  return (
-    <div>
-      <h1>Custom page</h1>
-      <p>This is the content of the custom page.</p>
-    </div>
-  )
-}
+
+
 
 const CustomUserButton = () => {
-  const { has, isLoaded } = useAuth()
+  const { isLoaded } = useAuth()
 
+/*   if(checkRole('admin')){
+    return <span>Admin Role</span>
+  }
+ */
   if (!isLoaded) {
     return <span>Loading...</span>
   }
 
-  const isAdmin = has({ permission: 'org:app:admin' })
+  //const isAdmin = has({ feature: 'admin' })
 
   return (
     <>
@@ -51,14 +52,14 @@ const CustomUserButton = () => {
                 href="https://accounts.weaselgames.app/user"
               />
 
-            {isAdmin &&
+{/*           {isAdmin &&
             (
                 <UserButton.Link
                   label="Admin Only"
                   labelIcon={<DotIcon />}
                   href="./pages/admin"
                 />
-            )}
+            )}  */}
 
           </UserButton.MenuItems>
         </UserButton>
