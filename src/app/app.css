@@ -99,8 +99,11 @@ h1 {
 }
 
 #mobileSignIn {
-  color: #572364;
-  border: #572364;
+  background-color:#853A98;
+  padding: 4px;
+  text-align: center;
+  border:3px solid #572364;
+  border-radius: 8;
 }
 
 #mobileItem {
@@ -207,10 +210,7 @@ h2 {
   background-color:#c595d1 ;
   padding: 4px;
   border:3px solid #572364 ;
-  border-bottom-right-radius: 8;
-  border-top-right-radius: 8;
-  border-bottom-left-radius: 8;
-  border-top-left-radius: 8;
+  border-radius: 8;
 }
 
 #pfp {

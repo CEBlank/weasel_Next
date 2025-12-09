@@ -31,9 +31,9 @@ const CustomUserButton = () => {
   const { user, isLoaded } = useUser()
 
     //hard code it for testing only
-    const adminID = 'user_36DunqSRu2Afx58qQG8cYzHZbTZ';
+    //const adminID = 'user_36DunqSRu2Afx58qQG8cYzHZbTZ';
 
-    console.log("checked user", user);
+  //  console.log("checked user", user);
   
   if (isLoaded) {
     return (

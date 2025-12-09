@@ -41,7 +41,7 @@ export default function RootLayout({
     <html lang="en">
 
     <body>
-        <ClerkProvider>
+        <ClerkProvider >
           <Nav />
         
           {children}

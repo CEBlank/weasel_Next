@@ -318,21 +318,22 @@ const Nav = () => {
 
 
             {/* Logo */}
-            <div className="ml-4 flex lg:ml-0">
-              <h3 className='text-center content-center' 
-                  id="logoHeader">Weasel <br /> Games</h3>
-              <a href="/">
-                <span className="sr-only">Weasel Games</span>
-                <Image
-                  loading="eager"
-                  alt="Weasel Games"
-                  src={"/weaselArcherHead.png"}
-                  height={100}
-                  width={90}
-                  className="w-16 h-20"
-                />
-              </a>
-            </div>
+            <a href="/">
+              <div className="ml-4 flex lg:ml-0">
+                <h3 className='text-center content-center' 
+                    id="logoHeader"
+                    >Weasel <br /> Games</h3>
+                  <span className="sr-only">Weasel Games</span>
+                  <Image
+                    loading="eager"
+                    alt="Weasel Games"
+                    src={"/weaselArcherHead.png"}
+                    height={100}
+                    width={90}
+                    className="w-16 h-20"
+                  />
+              </div> 
+            </a>
 
       {/* The Main Display popovers - Not Mobile */}
             <PopoverGroup className='hidden lg:ml-8 lg:block lg:self-stretch'>
