@@ -23,6 +23,7 @@ import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@her
 
 import authUser from './userAuth';
 import CartDrawer from './Cart';
+import { SignedIn } from '@clerk/nextjs'
 
 //import LoginButton from './LoginButton'
 //import LogoutButton from './LogOutButton'
@@ -284,8 +285,12 @@ const Nav = () => {
 
               {/* Mobile view Login */}
             <div className="space-y-6 border-t border-gray-200 px-4 py-6">
-              <div className="flow-root"> 
-                  {authUser()}                    
+              <div 
+                id="mobileSignIn"
+                className="flow-root"> 
+                
+                  {authUser()}
+                
               </div>
             </div>
 
@@ -412,19 +417,7 @@ const Nav = () => {
 
             <div  className="ml-auto flex items-center">
               <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                {authUser()}  
-
-{/*               <div id='login'  className="text-sm font-medium">
-
-                  <LoginButton />
-
-                </div>
-                <div id='logout' className="text-sm font-medium">
-
-                  <LogoutButton />
-
-                </div> */}
-                
+                {authUser()}                  
               </div> 
 
 

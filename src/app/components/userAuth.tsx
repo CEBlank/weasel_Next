@@ -32,11 +32,11 @@ export default function authUser() {
 
           <SignedOut>
           <SignInButton />
-          <SignUpButton>
+{/*           <SignUpButton>
             <a id="homeButton" className="text-1xl">
               Sign Up
             </a>
-          </SignUpButton>
+          </SignUpButton> */}
         </SignedOut>
 
         <SignedIn>

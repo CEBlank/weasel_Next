@@ -35,7 +35,7 @@ const CustomUserButton = () => {
 
     console.log("checked user", user);
   
-  if (user.id = adminID) {
+  if (isLoaded) {
     return (
     <>
   
@@ -59,6 +59,7 @@ const CustomUserButton = () => {
               />
               : ""
           }
+
           </UserButton.MenuItems>
         </UserButton>
       </div>

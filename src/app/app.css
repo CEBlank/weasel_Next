@@ -98,6 +98,11 @@ h1 {
   background-color: #D7E3F4;
 }
 
+#mobileSignIn {
+  color: #572364;
+  border: #572364;
+}
+
 #mobileItem {
   color: #853A98;
 }
