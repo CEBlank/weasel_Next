@@ -28,10 +28,12 @@ const DotIcon = () => {
 
 
 const CustomUserButton = () => {
-  const { user, isLoaded} = useUser()
+  const { user, isLoaded } = useUser()
 
     //hard code it for testing only
     const adminID = 'user_36DunqSRu2Afx58qQG8cYzHZbTZ';
+
+    console.log("checked user", user);
   
   if (user.id = adminID) {
     return (
@@ -48,12 +50,15 @@ const CustomUserButton = () => {
                 href="./pages/account"
               />
 
+          {user.organizationMemberships[0].role === "org:admin" ? 
+
               <UserButton.Link
                 label="Admin"
                 labelIcon={<DotIcon />}
                 href="./pages/admin"
               />
-          
+              : ""
+          }
           </UserButton.MenuItems>
         </UserButton>
       </div>
