@@ -1,4 +1,4 @@
-/* const { MongoClient, ServerApiVersion } = require("mongodb");
+const { MongoClient, ServerApiVersion } = require("mongodb");
 
 // Replace the placeholder with your Atlas connection string
 const uri = "mongodb+srv://Vercel-Admin-weasel-games-db:tRrqVtYrdB4BTybU@weasel-games-db.1iwb3zs.mongodb.net/?retryWrites=true&w=majority";
@@ -13,18 +13,24 @@ const client = new MongoClient(uri,  {
     }
 );
 
-async function runMongo() {
+export async function runMongo() {
+
+  console.log("start mongo async");
   try {
     // Connect the client to the server (optional starting in v4.7)
     await client.connect();
+      console.log("TRY");
 
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
   } finally {
     // Ensures that the client will close when you finish/error
+    console.log("CLOSE");
     await client.close();
   }
 }
 runMongo().catch(console.dir);
- */
+
+
+
