@@ -1,4 +1,3 @@
-import { runMongo } from "app/lib/mongoDB";
 
 const Shop = () => {
 

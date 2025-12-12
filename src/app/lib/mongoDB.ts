@@ -1,36 +1,14 @@
-const { MongoClient, ServerApiVersion } = require("mongodb");
+import { MongoClient, MongoClientOptions } from 'mongodb';
+import { attachDatabasePool } from '@vercel/functions';
 
-// Replace the placeholder with your Atlas connection string
-const uri = "mongodb+srv://Vercel-Admin-weasel-games-db:tRrqVtYrdB4BTybU@weasel-games-db.1iwb3zs.mongodb.net/?retryWrites=true&w=majority";
+const options: MongoClientOptions = {
+  appName: "devrel.vercel.integration",
+  maxIdleTimeMS: 5000
+};
+const client = new MongoClient(process.env.MONGODB_URI, options);
 
-// Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(uri,  {
-        serverApi: {
-            version: ServerApiVersion.v1,
-            strict: true,
-            deprecationErrors: true,
-        }
-    }
-);
+// Attach the client to ensure proper cleanup on function suspension
+attachDatabasePool(client);
 
-export async function runMongo() {
-
-  console.log("start mongo async");
-  try {
-    // Connect the client to the server (optional starting in v4.7)
-    await client.connect();
-      console.log("TRY");
-
-    // Send a ping to confirm a successful connection
-    await client.db("admin").command({ ping: 1 });
-    console.log("Pinged your deployment. You successfully connected to MongoDB!");
-  } finally {
-    // Ensures that the client will close when you finish/error
-    console.log("CLOSE");
-    await client.close();
-  }
-}
-runMongo().catch(console.dir);
-
-
-
+// Export a module-scoped MongoClient to ensure the client can be shared across functions.
+export default client; 
