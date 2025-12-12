@@ -1,4 +1,46 @@
+//import { runMongo } from "app/lib/mongoDB";
+
 const Shop = () => {
+
+const { MongoClient, ServerApiVersion } = require("mongodb");
+
+// Replace the placeholder with your Atlas connection string
+const uri = "mongodb+srv://Vercel-Admin-weasel-games-db:tRrqVtYrdB4BTybU@weasel-games-db.1iwb3zs.mongodb.net/?retryWrites=true&w=majority";
+
+// Create a MongoClient with a MongoClientOptions object to set the Stable API version
+const client = new MongoClient(uri,  {
+        serverApi: {
+            version: ServerApiVersion.v1,
+            strict: true,
+            deprecationErrors: true,
+        }
+    }
+);
+
+async function runMongo() {
+
+  console.log("start mongo async");
+  try {
+    // Connect the client to the server (optional starting in v4.7)
+    await client.connect();
+      console.log("TRY");
+
+    // Send a ping to confirm a successful connection
+    await client.db("admin").command({ ping: 1 });
+    console.log("Pinged your deployment. You successfully connected to MongoDB!");
+  } finally {
+    // Ensures that the client will close when you finish/error
+    console.log("CLOSE");
+    await client.close();
+  }
+}
+runMongo().catch(console.dir);
+
+
+
+
+
+
 
 const products = [
   {
@@ -6,8 +48,9 @@ const products = [
     name: 'Dungeons&Dragons: Player Handbook 2024',
     href: '#',
     price: '$49.99',
-    imageSrc: '#',
+    imageSrc: 'https://cdn.discordapp.com/attachments/1279517664649416795/1448863751204769864/wocd37110.png?ex=693ccf04&is=693b7d84&hm=bb857391af424ac808b3fc3523b46d05443a3aae1e7896cf45e0e02237386b5f&',
     imageAlt: 'Dungeons and Dragons player handbook 2024 edition.',
+    stock: '5',
   },
   {
     id: 2,
@@ -17,7 +60,7 @@ const products = [
     imageSrc: '#',
     imageAlt: '#',
   },
-  {
+ /*  {
     id: 3,
     name: 'Arcadia Quest',
     href: '#',
@@ -64,7 +107,7 @@ const products = [
     price: '$32.00',
     imageSrc: '#',
     imageAlt: 'Textured gray felt pouch for paper cards with snap button flap and elastic pen holder loop.',
-  },
+  }, */
 ]
 
   return (
@@ -77,11 +120,11 @@ const products = [
             <span key={product.id} 
                   // href={product.href} 
                   className="group">
-              <p
-                /* alt={product.imageAlt}
-                src={product.imageSrc} */
+              <img
+                alt={product.imageAlt}
+                src={product.imageSrc} 
                 className="aspect-square w-full rounded-lg object-cover bg-gray-300 group-hover:opacity-75 xl:aspect-7/8"
-              ></p>
+              ></img>
               <h3 className="mt-4 text-sm text-gray-700">{product.name}</h3>
               <p className="mt-1 text-lg font-medium text-gray-900">{product.price}</p>
             </span>

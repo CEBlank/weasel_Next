@@ -1,21 +1,30 @@
-const { MongoClient } = require('mongodb');
+/* const { MongoClient, ServerApiVersion } = require("mongodb");
 
-async function runGetStarted() {
-  // Replace the uri string with your connection string
-  const uri = '<connection string URI>';
-  const client = new MongoClient(uri);
+// Replace the placeholder with your Atlas connection string
+const uri = "mongodb+srv://Vercel-Admin-weasel-games-db:tRrqVtYrdB4BTybU@weasel-games-db.1iwb3zs.mongodb.net/?retryWrites=true&w=majority";
 
+// Create a MongoClient with a MongoClientOptions object to set the Stable API version
+const client = new MongoClient(uri,  {
+        serverApi: {
+            version: ServerApiVersion.v1,
+            strict: true,
+            deprecationErrors: true,
+        }
+    }
+);
+
+async function runMongo() {
   try {
-    const database = client.db('sample_mflix');
-    const movies = database.collection('movies');
+    // Connect the client to the server (optional starting in v4.7)
+    await client.connect();
 
-    // Queries for a movie that has a title value of 'Back to the Future'
-    const query = { title: 'Back to the Future' };
-    const movie = await movies.findOne(query);
-
-    console.log(movie);
+    // Send a ping to confirm a successful connection
+    await client.db("admin").command({ ping: 1 });
+    console.log("Pinged your deployment. You successfully connected to MongoDB!");
   } finally {
+    // Ensures that the client will close when you finish/error
     await client.close();
   }
 }
-runGetStarted().catch(console.dir);
+runMongo().catch(console.dir);
+ */
