@@ -24,6 +24,12 @@
       },
       "api": {
         "thisWeaselAPI": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d3fey2pgzila39",
+          "type": "cicd"
+        }
       }
     }
   }
