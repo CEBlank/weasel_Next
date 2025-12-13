@@ -1,5 +1,5 @@
 
-
+import { Amplify } from "aws-amplify";
 
 const Shop = () => {
 
