@@ -1,6 +1,6 @@
 export type AmplifyDependentResourcesAttributes = {
   "api": {
-    "weaselAPI": {
+    "thisWeaselAPI": {
       "ApiId": "string",
       "ApiName": "string",
       "RootUrl": "string"

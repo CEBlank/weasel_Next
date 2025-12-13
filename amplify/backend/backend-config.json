@@ -1,6 +1,6 @@
 {
   "api": {
-    "weaselAPI": {
+    "thisWeaselAPI": {
       "dependsOn": [
         {
           "attributes": [
@@ -18,7 +18,29 @@
   "function": {
     "LambWeaselfunct": {
       "build": true,
-      "dependsOn": [],
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "dynamicWeasel"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ],
+          "category": "storage",
+          "resourceName": "weaselDynamo"
+        }
+      ],
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }

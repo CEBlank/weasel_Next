@@ -23,7 +23,7 @@
         "weaselDynamo": {}
       },
       "api": {
-        "weaselAPI": {}
+        "thisWeaselAPI": {}
       }
     }
   }
