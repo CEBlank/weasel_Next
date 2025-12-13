@@ -1,13 +1,18 @@
+import client from "app/lib/mongoDB"
 
 const Shop = () => {
 
+const database = client.db("weasel-games-db");
+const collection = database.collection("products");
 
+console.log("database", database)
+console.log("collection", collection);
 
 const products = [
   {
     id: 1,
     name: 'Dungeons&Dragons: Player Handbook 2024',
-    href: '#',
+    //href: '#',
     price: '$49.99',
     imageSrc: 'https://cdn.discordapp.com/attachments/1279517664649416795/1448863751204769864/wocd37110.png?ex=693ccf04&is=693b7d84&hm=bb857391af424ac808b3fc3523b46d05443a3aae1e7896cf45e0e02237386b5f&',
     imageAlt: 'Dungeons and Dragons player handbook 2024 edition.',
@@ -16,7 +21,7 @@ const products = [
   {
     id: 2,
     name: 'Root - A Game of Woodland Might and Right',
-    href: '#',
+    //href: '#',
     price: '$60.00',
     imageSrc: '#',
     imageAlt: '#',
