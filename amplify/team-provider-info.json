@@ -1,0 +1,29 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-weaselnext-dev-2bbde-authRole",
+      "UnauthRoleArn": "arn:aws:iam::252838882516:role/amplify-weaselnext-dev-2bbde-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::252838882516:role/amplify-weaselnext-dev-2bbde-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-weaselnext-dev-2bbde-deployment",
+      "UnauthRoleName": "amplify-weaselnext-dev-2bbde-unauthRole",
+      "StackName": "amplify-weaselnext-dev-2bbde",
+      "StackId": "arn:aws:cloudformation:us-east-1:252838882516:stack/amplify-weaselnext-dev-2bbde/b59aa530-d7ec-11f0-9cc1-0ec682d7ac7d",
+      "AmplifyAppId": "d3fey2pgzila39"
+    },
+    "categories": {
+      "function": {
+        "LambWeaselfunct": {
+          "deploymentBucketName": "amplify-weaselnext-dev-2bbde-deployment",
+          "s3Key": "amplify-builds/LambWeaselfunct-64582b666e4d50502b44-build.zip"
+        }
+      },
+      "storage": {
+        "dynamicWeasel": {}
+      },
+      "api": {
+        "weaselAPI": {}
+      }
+    }
+  }
+}

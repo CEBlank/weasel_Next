@@ -1,0 +1,63 @@
+{
+  "api": {
+    "weaselAPI": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "LambWeaselfunct"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "LambWeaselfunct": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "dynamicWeasel"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_LambWeaselfunct_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "LambWeaselfunct"
+        }
+      ]
+    },
+    "AMPLIFY_function_LambWeaselfunct_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "LambWeaselfunct"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "dynamicWeasel": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "resourceName": "dynamicWeasel",
+  "tableName": "products",
+  "partitionKey": {
+    "fieldName": "books",
+    "fieldType": "string"
+  },
+  "sortKey": {
+    "fieldName": "stock",
+    "fieldType": "number"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}
