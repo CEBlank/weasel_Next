@@ -1,0 +1,16 @@
+{
+  "resourceName": "weaselDynamo",
+  "tableName": "weaselProducts",
+  "partitionKey": {
+    "fieldName": "category",
+    "fieldType": "string"
+  },
+  "sortKey": {
+    "fieldName": "collection",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": [
+    "LambWeaselfunct"
+  ]
+}

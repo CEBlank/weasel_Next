@@ -30,6 +30,15 @@
           ],
           "category": "storage",
           "resourceName": "dynamicWeasel"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ],
+          "category": "storage",
+          "resourceName": "weaselDynamo"
         }
       ],
       "providerPlugin": "awscloudformation",
@@ -56,6 +65,10 @@
   },
   "storage": {
     "dynamicWeasel": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    },
+    "weaselDynamo": {
       "providerPlugin": "awscloudformation",
       "service": "DynamoDB"
     }

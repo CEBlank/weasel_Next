@@ -19,7 +19,8 @@
         }
       },
       "storage": {
-        "dynamicWeasel": {}
+        "dynamicWeasel": {},
+        "weaselDynamo": {}
       },
       "api": {
         "weaselAPI": {}
