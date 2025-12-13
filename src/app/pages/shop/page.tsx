@@ -1,12 +1,9 @@
-import client from "app/lib/mongoDB"
+
+
 
 const Shop = () => {
 
-const database = client.db("weasel-games-db");
-const collection = database.collection("products");
 
-//console.log("database", database)
-//console.log("collection", collection);
 
 const products = [
   {
