@@ -1,39 +1,11 @@
-import client from "app/lib/mongoDB";
-
-
-
-const { MongoClient } = require('mongodb');
-
-
-const credentials = '<path_to_certificate>'
-
-/* const client = new MongoClient('mongodb://awsweaselinstance-sg97x3.a.query.mongodb.net/?ssl=true&authSource=%24external&authMechanism=MONGODB-X509&appName=AWSweaselInstance', {
-  tlsCertificateKeyFile: credentials
-}); */
-
-export async function run() {
-  try {
-    await client.connect();
-    const database = client.db("weasel-games-db");
-    console.log("database", database);
-
-    const collection = database.collection("products");
-    console.log("collection", collection);
-    
-    const docCount = await collection.countDocuments({});
-    console.log(docCount);
-    // perform actions using client
-  } finally {
-    // Ensures that the client will close when you finish/error
-    await client.close();
-  }
-}
-run().catch(console.dir);
-
+import { testConnect } from "app/utils/connectMongo"
 
 const Shop = () => {
 
-run();
+console.log("this page works.")
+testConnect();
+
+console.log("after test")
 
 const products = [
   {
