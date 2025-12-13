@@ -1,6 +1,6 @@
 
 import { Amplify } from "aws-amplify";
-import outputs from "amplifyconfiguration.json"
+//import outputs from "amplifyconfiguration.json"
 
 const Shop = () => {
 
