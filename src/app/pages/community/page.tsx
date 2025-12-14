@@ -6,12 +6,14 @@ const Community = () => {
 
   return (
     <>
+    
+    <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 bg-white">
 
     <h1 className="text-center">
       From the Community
     </h1>
 
-    <div className="pb-24 sm:pb-32 border rounded border-gray-400 mx-10 mb-10 bg-gray-400">
+    <div className="pb-24 sm:pb-32 border rounded mx-10 mb-10">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="pt-5">
@@ -20,7 +22,7 @@ const Community = () => {
         </div>
         <div className="mx-auto mt-5 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-6 border-t border-gray-700 pt-5 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {posts.map((post) => (
-            <article key={post.id} className="flex max-w-xl flex-col items-start justify-between border bg-white rounded p-4 shadow-2xl">
+            <article key={post.id} className="flex max-w-xl flex-col items-start justify-between border rounded p-4 shadow-2xl">
               <div className="flex items-center gap-x-4 text-xs ">
                 <time dateTime={post.datetime} className="">
                   {post.date}
@@ -87,6 +89,7 @@ const Community = () => {
     </div>
     </div> */}
     
+    </div>
     </>
   )
 }
