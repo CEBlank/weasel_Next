@@ -112,12 +112,63 @@ export const communityPosts = [
     href: '#',
     description:
       'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    date: 'Mar 16, 2020',
-    datetime: '2020-03-16',
+    date: 'Nov 21, 2025',
+    datetime: '2025-11-21',
+    category: { title: 'MTG Tournament', href: '#' },
+    author: {
+      name: 'SpongeBob',
+      role: 'Frycook / Magic:The Gathering Player',
+      href: '#',
+      imageUrl:
+        '/user.png',
+    },
+  },
+    {
+    id: 2,
+    title: 'Root Adventure Night',
+    href: '#',
+    description:
+      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+    date: 'May 1, 2025',
+    datetime: '2020-05-01',
+    category: { title: 'Root Adventure', href: '#' },
+    author: {
+      name: 'Patrick',
+      role: 'Root Player',
+      href: '#',
+      imageUrl:
+        '/user.png',
+    },
+  },
+      {
+    id: 3,
+    title: 'Open Paint',
+    href: '#',
+    description:
+      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+    date: 'Mar 5, 2025',
+    datetime: '2025-03-05',
     category: { title: 'Past Events', href: '#' },
     author: {
-      name: 'Michael Foster',
-      role: 'Co-Founder / CTO',
+      name: 'Squidward',
+      role: 'Artist',
+      href: '#',
+      imageUrl:
+        '/user.png',
+    },
+  },
+      {
+    id: 4,
+    title: 'Adventure League',
+    href: '#',
+    description:
+      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+    date: 'Jan 2, 2025',
+    datetime: '2025-01-01',
+    category: { title: 'Past Events', href: '#' },
+    author: {
+      name: 'Mr. Crabs',
+      role: 'D&D Adventure League DM',
       href: '#',
       imageUrl:
         '/user.png',

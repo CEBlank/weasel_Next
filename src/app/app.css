@@ -155,11 +155,6 @@ footer {
   align-content:center;
 }
 
-#carouselDIV {
-  justify-content: center;
-  align-items: center;
-  margin: auto
-}
 
 #carouselBtn {
   color: #D7E3F4;
