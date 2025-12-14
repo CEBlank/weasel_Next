@@ -6,7 +6,8 @@ const Footing = () => {
 
   return (
 
-<footer className="footer sm:footer-horizontal px-10 py-3 align-bottom">
+<footer className="footer sm:footer-horizontal px-10 py-3 content-end">
+  
   <aside>
     <p>
       Weasel Games Company
@@ -76,8 +77,9 @@ const Footing = () => {
         </Link>
       </div>
   </nav>
-  
+
 </footer>
+
   )
 
 }

@@ -1,50 +1,31 @@
-/* export type Books = {
-  sku: number,
-  isbn: number,
-  Title: string,
+export type Product = {
+  id: number,
+  isbn: string,
+  name: string,
   Publisher: string,
   Brand: string, 
   Alternative_Cover: boolean, 
   BookType: string, 
-  image: string,
+  imageSrc:string,
+  imageAlt: string,
   group: string,
   year: number,
   price: number,
-  stock: number
+  stock: number, 
+  checked: undefined
   };
 
-export type Accessories = { 
-  sku: number,
-  Title: string,
-  Publisher: string,
-  Brand: string, 
-  Alternative_Cover: boolean, 
-  BookType: string, 
-  image: string,
-  group: string,
-  year: number,
-  price: number,
-  stock: number
-};
+export type selectedItem = {
+  Product: Product,
+  checked: true
+}
 
-export type Cards = { 
-  sku: number,
-  Title: string,
-  Publisher: string,
-  Brand: string, 
-  Alternative_Cover: boolean, 
-  BookType: string, 
-  image: string,
-  group: string,
-  year: number,
-  price: number,
-  stock: number
-}; */
 
-export const products = [
+
+export const productsType: Product[] = [
   {
     id: 1,
-    isbn: 123,
+    isbn: "123",
     name: "Dungeons & Dragons Monster Manual (2024)",
     Publisher: "Wizards of the Coast",
     Brand: "Dungeons and Dragons", 
@@ -55,11 +36,12 @@ export const products = [
     group: "books",
     year: 2024,
     price: 49.99,
-    stock: 5
+    stock: 5,
+    checked: undefined
   }, 
   {
     id: 2,
-    isbn: 123,
+    isbn: "123",
     name: "Dungeons & Dragons Dungeon Master's Guide (2024)",
     Publisher: "Wizards of the Coast",
     Brand: "Dungeons and Dragons", 
@@ -70,11 +52,12 @@ export const products = [
     group: "books",
     year: 2024,
     price: 49.99,
-    stock: 4
+    stock: 4,
+    checked: undefined
   }, 
   {
     id: 3,
-    isbn: 123,
+    isbn: "123",
     name: "Dungeons & Dragons Monster Manual (2024)",
     Publisher: "Wizards of the Coast",
     Brand: "Dungeons and Dragons", 
@@ -85,7 +68,8 @@ export const products = [
     group: "books",
     year: 2024,
     price: 89.99,
-    stock: 1
+    stock: 1,
+    checked: undefined
   }, 
   {
     id: 4,
@@ -100,7 +84,8 @@ export const products = [
     group: "board game",
     year: 2020,
     price: 60.00,
-    stock: 3
+    stock: 3,
+    checked: undefined
   },
     {
     id: 5,
@@ -115,6 +100,27 @@ export const products = [
     group: "dice sets",
     year: 2024,
     price: 11.00,
-    stock: 11
+    stock: 11,
+    checked: undefined
+  },
+]
+
+export const communityPosts = [
+  {
+    id: 1,
+    title: 'Tournament Night',
+    href: '#',
+    description:
+      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+    date: 'Mar 16, 2020',
+    datetime: '2020-03-16',
+    category: { title: 'Past Events', href: '#' },
+    author: {
+      name: 'Michael Foster',
+      role: 'Co-Founder / CTO',
+      href: '#',
+      imageUrl:
+        '/user.png',
+    },
   },
 ]

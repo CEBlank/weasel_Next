@@ -155,6 +155,18 @@ footer {
   align-content:center;
 }
 
+#carouselDIV {
+  justify-content: center;
+  align-items: center;
+  margin: auto
+}
+
+#carouselBtn {
+  color: #D7E3F4;
+  background-color: #853A98;
+  border: #572364 1px solid;
+}
+
 /* Events page CSS */
 
 #eventsHead {
