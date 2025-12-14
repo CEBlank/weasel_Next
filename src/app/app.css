@@ -300,3 +300,10 @@ form {
 #continueButton:hover {
   color: #4f7aaa;
 }
+
+/* Community Page */
+
+#announcements {
+  justify-content: center;
+  background-color: #63b3ed;
+}

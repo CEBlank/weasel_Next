@@ -3,7 +3,7 @@ import { announcements, communityPosts } from "app/lib/products";
 const Community = () => {
 
   const posts = communityPosts;
-  const announcement = announcements;
+  const upcomingPost = announcements;
 
   return (
     <>
@@ -14,22 +14,29 @@ const Community = () => {
       <h1 className="text-center">
         From the Community
       </h1>
-      {announcement.map((announcement) => (
-            <div key={announcement.id} className="flex mx-auto mb-15 border shadow-emerald-700 shadow-sm rounded max-w-xl flex-col items-center justify-between p-4">
-                <h3 className="mt-3 text-lg/6 font-semibold">
-                  <span className="absolute inset-0" />
-                  {announcement.title}
-                </h3>
-                <div className="flex items-center gap-x-4 text-xs ">
-                <time className="">
-                  {announcement.date}
-                </time>
-              </div>
-              <div className="group relative grow">
-                <p className="mt-5 line-clamp-3 text-sm/6">{announcement.content}</p>
-              </div>
-            </div>
-          ))} 
+
+{/*       <div>
+        Testing 
+      </div> */}
+
+{/*         <div id="announcement">
+          {upcomingPost.map((upcomingPost) => (
+                <article key={upcomingPost.id} className="flex mx-auto mb-15 border shadow-emerald-700 shadow-sm rounded max-w-xl flex-col items-center justify-between p-4">
+                    <h3 className="mt-3 text-lg/6 font-semibold">
+                      <span className="absolute inset-0" />
+                      {upcomingPost.title}
+                    </h3>
+                    <div className="flex items-center gap-x-4 text-xs ">
+                    <time>
+                      {upcomingPost.date}
+                    </time>
+                  </div>
+                  <div className="group relative grow">
+                    <p className="mt-5 line-clamp-3 text-sm/6">{upcomingPost.content}</p>
+                  </div>
+                </article>
+              ))} 
+        </div>   */} 
 
     </div>
 
@@ -76,6 +83,7 @@ const Community = () => {
             </ul>
 
         </div>
+
         <div className="mx-auto mt-5 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-6 border-t border-gray-700 pt-5 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {posts.map((post) => (
             <article key={post.id} className="flex max-w-xl flex-col items-start justify-between border rounded p-4 shadow-fuchsia-950 shadow-md">
