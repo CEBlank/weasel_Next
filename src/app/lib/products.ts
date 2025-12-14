@@ -177,3 +177,80 @@ export const communityPosts = [
     },
   },
 ]
+
+export const pastEvents = [
+  {
+    name: "Magic:The Gathering Tournament 2025",
+    date: 'Nov 21, 2025',
+    datetime: '2025-11-21',
+    image: "/trophy.jpg",
+    alt: "trophy",
+    content: " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+  },
+  {
+    name: "Yu-Gi-Oh Casual Night",
+    date: 'Oct 1, 2025',
+    datetime: '2025-10-01',
+    image: "/yu-gi-oh.jpg",
+    alt: "yu-gi-oh",
+    content: " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+  },
+    {
+    name: "Dungeons & Dragons: Adventure League",
+    date: 'Dec 4, 2025',
+    datetime: '2025-12-04',
+    image: "/gameNight.jpg",
+    alt: "Game Night",
+    content: " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+  },
+]
+
+export const news = [
+  {
+    id: 1,
+    name:"Tabletop Game Events",
+    image:"/d&d.jpg",
+    alt: "dungeons and dragons",
+    content: "Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.",
+    href:"#",
+    linkName:"Check Events"
+  },
+    {
+    id: 2,
+    name:"Card Tournaments",
+    image:"/mtg.jpg",
+    alt: "magic the gathering",
+    content: "Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.",
+    href:"#",
+    linkName:"Check Events"
+  },
+    {
+    id: 3,
+    name:"Open Paint Nights",
+    image:"/warhammer40k.jpg",
+    alt: "warhammer mini",
+    content: "Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.",
+    href:"#",
+    linkName:"Check Community"
+  },
+  {
+    id: 4,
+    name:"Festive Week",
+    image:"/confetti.jpg",
+    alt: "confetti image",
+    content: "Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.",
+    href:"/pages/community",
+    linkName:"Check Community"
+  },
+]
+
+export const announcements = [
+  {
+    id: 1,
+    title: "Festive Week is coming!",
+    content: "Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi",
+    alt:"festive picture",
+    image:"/confetti.jpg",
+    date: "December 28th through January 4th"
+  }
+]

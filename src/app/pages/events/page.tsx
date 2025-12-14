@@ -110,7 +110,7 @@ const Events = () => {
               </figure>
             </div>
 
-            <div className="card bg-gray-400 w-96 shadow-fuchsia-950 shadow-md ">
+            <div className="card bg-gray-400 w-96 shadow-2xl mb-3 ">
               <div className="card-body">
                 <h2 className="card-title">Dungeons&Dragons: Adventure League</h2>
                 <p>

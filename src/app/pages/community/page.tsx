@@ -1,25 +1,80 @@
-import { communityPosts } from "app/lib/products";
+import { announcements, communityPosts } from "app/lib/products";
 
 const Community = () => {
 
   const posts = communityPosts;
+  const announcement = announcements;
 
   return (
     <>
     
     <div className="mx-auto max-w-2xl px-4 py-5 sm:px-6 sm:py-5 lg:max-w-7xl lg:px-8 bg-white">
 
-    <h1 className="text-center">
-      From the Community
-    </h1>
+    <div className="content-center">
+      <h1 className="text-center">
+        From the Community
+      </h1>
+      {announcement.map((announcement) => (
+            <div key={announcement.id} className="flex mx-auto mb-15 border shadow-emerald-700 shadow-sm rounded max-w-xl flex-col items-center justify-between p-4">
+                <h3 className="mt-3 text-lg/6 font-semibold">
+                  <span className="absolute inset-0" />
+                  {announcement.title}
+                </h3>
+                <div className="flex items-center gap-x-4 text-xs ">
+                <time className="">
+                  {announcement.date}
+                </time>
+              </div>
+              <div className="group relative grow">
+                <p className="mt-5 line-clamp-3 text-sm/6">{announcement.content}</p>
+              </div>
+            </div>
+          ))} 
+
+    </div>
 
     <div className="pb-24 sm:pb-32 border rounded mx-10 mb-10">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="pt-5 text-center">
-            Want to stay up-to-date? Find us on <a 
-              >Discord!</a>
+          <h2 className="pt-5 mx-auto">
+            Want to stay up-to-date? Find us on our socials!
           </h2>
+            <ul className="menu lg:menu-horizontal">
+              <li className="p-4">
+                <button
+                  id="heroBtn"
+                  className="btn p">
+                    <img 
+                      className="size-10"
+                      src="/discordPNG.png"
+                      alt="discord icon">
+                    </img>
+                    Discord</button>
+              </li>
+              <li className="p-4">
+                <button
+                  id="heroBtn"
+                  className="btn p">
+                <img 
+                  className="size-10 "
+                  src="/youtubePNG.png"
+                  alt="youtube icon">
+                </img>
+                  Youtube</button>
+              </li>
+              <li className="p-4">
+                <button 
+                  id="heroBtn"
+                  className="btn p">
+                  <img 
+                    className="size-9"
+                    src="/instaPNG.png"
+                    alt="insta icon">
+                  </img>
+                  Instagram</button>
+              </li>
+            </ul>
+
         </div>
         <div className="mx-auto mt-5 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-6 border-t border-gray-700 pt-5 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {posts.map((post) => (
