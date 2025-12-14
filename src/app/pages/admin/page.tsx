@@ -10,7 +10,7 @@ export default function Admin() {
       role='org:admin'
       fallback={<p>Only an Admin or Billing Manager can access this content.</p>}
     >
-  <div>
+  <div className="mx-auto max-w-2xl px-4 py-5 sm:px-6 sm:py-5 lg:max-w-7xl lg:px-8 bg-white">
         <form 
           className="flex justify-center mt-2 mb-3"
           id="profileForm">

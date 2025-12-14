@@ -14,8 +14,10 @@ export default function Home() {
   return (
     <div className="app-container">
       <div className="main-card-wrapper">
+      <div className="mx-auto max-w-2xl px-4 sm:px-6 py-5 sm:py-5 lg:max-w-7xl lg:px-8 bg-white">
 
-<div className='home'>
+      
+      <div className='home'>
         <div>
           
           <div
@@ -76,7 +78,7 @@ export default function Home() {
           id="homeCards"
           className="flex flex-col justify-center">
 
-              <div id="item1" className="flex-wrap rounded-2xl card lg:card-side bg-gray-400 shadow-sm mb-4 md:mx-6">
+              <div id="item1" className="flex-wrap rounded card lg:card-side bg-gray-400 shadow-sm mb-4 md:mx-6">
 
                   <figure>
                     <Image
@@ -84,7 +86,7 @@ export default function Home() {
                       alt="dnd image"
                       height={200}
                       width={300}
-                      className="max-w-sm rounded-lg"/>
+                      className="max-w-sm rounded"/>
                     </figure>
                     <div className="card-body">
                       <h2 className="card-title">Tabletop Game Events</h2>
@@ -105,7 +107,7 @@ export default function Home() {
 
 
 {/* Add modals! */}
-              <div id="item2" className="flex-wrap rounded-2xl card lg:card-side bg-gray-400 shadow-sm mb-4 md:mx-6">
+              <div id="item2" className="flex-wrap rounded card lg:card-side bg-gray-400 shadow-sm mb-4 md:mx-6">
 
                   <figure>
                     <Image
@@ -113,7 +115,7 @@ export default function Home() {
                       alt="mtg image"
                       height={200}
                       width={300}
-                      className="max-w-sm rounded-lg"/>
+                      className="max-w-sm rounded"/>
                     </figure>
                     <div className="card-body">
                       <h2 className="card-title">Card Tournaments</h2>
@@ -132,7 +134,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div id="item3" className="flex-wrap rounded-2xl card lg:card-side bg-gray-400 shadow-sm mb-4 md:mx-6">
+                <div id="item3" className="flex-wrap rounded card lg:card-side bg-gray-400 shadow-sm mb-4 md:mx-6">
 
                   <figure>
                     <Image
@@ -140,7 +142,7 @@ export default function Home() {
                       alt="Warhammer 40k image"
                       height={200}
                       width={300}
-                      className="max-w-sm rounded-lg"/>
+                      className="max-w-sm rounded"/>
                     </figure>
                     <div className="card-body">
                       <h2 className="card-title">Open Paint Nights</h2>
@@ -162,7 +164,7 @@ export default function Home() {
             </div>
           </div>
 
-
+      </div>
       </div> 
     </div>
   );

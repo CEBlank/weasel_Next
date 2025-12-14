@@ -149,6 +149,12 @@ const navLinks = {
         }
       ],
       sections: [
+        {id: 'communityLink',
+          name: 'Community Page',
+          items: [
+            { name: 'Check out the Community Page', href: '../pages/community' },
+          ]
+        },
         {
           id: 'ttrpgEvents',
           name: 'TTRPG Events',
@@ -185,7 +191,7 @@ const navLinks = {
     pages: [
     { name: 'Home', href: '/' },
     { name: 'Shop All', href: '../pages/shop' },
-    { name: 'Events', href: '../pages/events' },
+    { name: 'Events', href: '../pages/events' }
   ]
 }
 
@@ -239,12 +245,12 @@ const Nav = () => {
                   <li>
                       <details>
                         <summary
-                        id='mobileCat'>
+                          id='mobileCat'>
                           {category.name}
                         </summary>
                       {category.sections.map((section) => (
-                        <ul>
-                          <li>
+                        <ul key={section.id} >
+                          <li key={category.id}>
                             <details>
                               <summary 
                               key={section.name}
@@ -258,7 +264,10 @@ const Nav = () => {
                                 key={item.name}
                                 className='py-2'
                                 id='mobileItem'>
-                                  {item.name}
+                                  <a href={item.href}>
+                                    {item.name}
+                                  </a>
+                                  
                                 </li>
                               ))}
                               </ul>

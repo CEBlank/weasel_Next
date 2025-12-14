@@ -1,3 +1,5 @@
+//stand-in for database 
+
 export type Product = {
   id: number,
   isbn: string,
