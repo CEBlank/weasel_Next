@@ -1,11 +1,18 @@
 import { testConnect } from "app/utils/connectMongo"
 
+//import { connectDB } from 'app/config/database';
+
+
+
 const Shop = () => {
+
+
 
 console.log("this page works.")
 testConnect();
 
 console.log("after test")
+
 
 const products = [
   {
