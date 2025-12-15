@@ -116,7 +116,7 @@ export const communityPosts = [
       'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
     date: 'Nov 21, 2025',
     datetime: '2025-11-21',
-    category: { title: 'MTG Tournament', href: '#' },
+    category: { title: 'Past Events', href: '#' },
     author: {
       name: 'SpongeBob',
       role: 'Frycook / Magic:The Gathering Player',
@@ -133,7 +133,7 @@ export const communityPosts = [
       'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
     date: 'May 1, 2025',
     datetime: '2020-05-01',
-    category: { title: 'Root Adventure', href: '#' },
+    category: { title: 'Past Events', href: '#' },
     author: {
       name: 'Patrick',
       role: 'Root Player',

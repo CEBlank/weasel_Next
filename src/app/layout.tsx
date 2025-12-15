@@ -8,6 +8,7 @@ import {
   UserButton,
 } from '@clerk/nextjs';
 import './globals.css';
+import './app.css';
 
 import Link from 'next/link';
 

@@ -86,16 +86,23 @@ h1 {
   font-size: xx-large;
 }
 
+#dialogPanel {
+  background-color: #D7E3F4;
+}
+
 #mobileCat {
   color: #853A98;
+  background-color: #D7E3F4;
 }
 
 #mobileSection {
   color: #853A98;
+  background-color: #D7E3F4;
 }
 
 #mobileMenu {
   background-color: #D7E3F4;
+  min-height: 100%;
 }
 
 #mobileSignIn {
@@ -303,7 +310,3 @@ form {
 
 /* Community Page */
 
-#announcements {
-  justify-content: center;
-  background-color: #63b3ed;
-}

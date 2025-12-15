@@ -211,16 +211,18 @@ const Nav = () => {
         <DialogBackdrop
           transition
           id='dialog'
-          className="fixed inset-0 bg-black/25 transition-opacity duration-300 ease-linear data-closed:opacity-0"
-        />
-        <div className="fixed inset-0 z-40 flex">
+          className="fixed inset-0 bg-gray-500/75 transition-opacity duration-500 ease-in-out data-closed:opacity-0"
+/>
+        <div className="fixed inset-0 z-40 flex min-h-full">
           <DialogPanel
             transition
-            className="relative flex w-full max-w-xs transform flex-col overflow-y-auto pb-12 shadow-xl transition duration-300 ease-in-out data-closed:-translate-x-full"
+            id="dialogPanel"
+            className="relative flex w-screen max-w-xs transform flex-col overflow-auto overscroll-auto overflow-y-auto pb-12 shadow-xl transition duration-300 ease-in-out data-closed:-translate-x-full"
           >
-            <div className="flex px-4 pt-5 pb-2">
-              
+            {/* button only */}
+            <div className="flex px-4 pt-5 pb-2"> 
               <button
+                id="heroBtn"
                 type="button"
                 onClick={() => setOpen(false)}
                 className="relative -m-2 inline-flex items-center justify-center rounded-md p-2"
@@ -233,10 +235,10 @@ const Nav = () => {
 
             {/* MOBILE NAV */}
           <div 
-            className="px-4 text-lg min-h-full"
+            className="px-4 text-lg "
             id='mobileMenu'
           >
-              <div>
+          <div>
             {navLinks.categories.map((category) => (
               <ul
                 className='menu text-lg'
