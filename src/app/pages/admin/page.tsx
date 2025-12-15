@@ -8,11 +8,11 @@ export default function Admin() {
   return (
     <Protect
       role='org:admin'
-      fallback={<p>Only an Admin or Billing Manager can access this content.</p>}
+      fallback={<p>Only an Admin can access this content.</p>}
     >
-  <div className="mx-auto max-w-2xl px-4 py-5 sm:px-6 sm:py-5 lg:max-w-7xl lg:px-8 bg-white">
+  <div className="mx-auto max-w-2xl px-4 py-20 sm:px-20 sm:py-5 lg:max-w-7xl lg:px-8 bg-white">
         <form 
-          className="flex justify-center mt-2 mb-3"
+          className="flex border rounded shadow-fuchsia-950 shadow-md justify-center my-20 py-10"
           id="profileForm">
           <div>
             <div className="border-b border-gray-400 mx-5">

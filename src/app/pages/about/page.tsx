@@ -6,9 +6,9 @@ const About = () => {
 
   return (
     <>
-  <div className="mx-auto max-w-2xl px-4 sm:px-6 py-5 sm:py-5 lg:max-w-7xl lg:px-8 bg-white">
+  <div className="mx-auto py-20 sm:py-20 max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8 bg-white">
     <div 
-      className="mx-20 mb-3 text-center border rounded shadow-md shadow-fuchsia-950">
+      className="mx-20 mb-10 text-center border rounded shadow-md shadow-fuchsia-950">
       <h1
         className="mb-3">About Weasel Games</h1>
 
@@ -58,6 +58,7 @@ const About = () => {
 
       </div>
     </div>
+    <br />
     </div>
     </>
   )
