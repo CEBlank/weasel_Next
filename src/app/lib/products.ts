@@ -133,7 +133,7 @@ export const communityPosts = [
       'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
     date: 'May 1, 2025',
     datetime: '2020-05-01',
-    category: { title: 'Past Events', href: '#' },
+    category: { title: 'Past Events', href: '/pages/events' },
     author: {
       name: 'Patrick',
       role: 'Root Player',
@@ -150,7 +150,7 @@ export const communityPosts = [
       'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
     date: 'Mar 5, 2025',
     datetime: '2025-03-05',
-    category: { title: 'Past Events', href: '#' },
+    category: { title: 'Past Events', href: '/pages/events' },
     author: {
       name: 'Squidward',
       role: 'Artist',
@@ -167,7 +167,7 @@ export const communityPosts = [
       'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
     date: 'Jan 2, 2025',
     datetime: '2025-01-01',
-    category: { title: 'Past Events', href: '#' },
+    category: { title: 'Past Events', href: '/pages/events' },
     author: {
       name: 'Mr. Crabs',
       role: 'D&D Adventure League DM',
@@ -180,6 +180,7 @@ export const communityPosts = [
 
 export const pastEvents = [
   {
+    id: 1,
     name: "Magic:The Gathering Tournament 2025",
     date: 'Nov 21, 2025',
     datetime: '2025-11-21',
@@ -188,14 +189,16 @@ export const pastEvents = [
     content: " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
   },
   {
+    id:2,
     name: "Yu-Gi-Oh Casual Night",
     date: 'Oct 1, 2025',
     datetime: '2025-10-01',
-    image: "/yu-gi-oh.jpg",
-    alt: "yu-gi-oh",
+    image: "/yugiohh.jpg",
+    alt: "yugiohh",
     content: " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
   },
     {
+    id: 3,
     name: "Dungeons & Dragons: Adventure League",
     date: 'Dec 4, 2025',
     datetime: '2025-12-04',

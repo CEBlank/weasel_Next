@@ -1,5 +1,8 @@
+import { pastEvents } from "app/lib/products";
 
 const Events = () => {
+
+  //const pastEvent = pastEvents;
 
   return (
     <>
@@ -40,7 +43,7 @@ const Events = () => {
 
             <div
               id="detailsContent" 
-              className="rounded max-w-full min-h-50 bg-gray-400 md:flex-wrap md:py-3 shadow-fuchsia-950 shadow-md">
+              className="rounded max-w-full min-h-50 bg-white border md:flex-wrap md:py-3 shadow-fuchsia-950 shadow-md">
                 <p className="my-3 py-1">
                   Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.
                 </p>
@@ -81,22 +84,74 @@ const Events = () => {
 
           <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
 
-            <div className="card bg-gray-400 w-96 shadow-fuchsia-950 shadow-md">
+
+          {pastEvents.map((event) => (
+
+            <div
+              key={event.id} 
+              className="card bg-white border rounded  w-96 shadow-fuchsia-950 shadow-md">
               <div className="card-body">
-                <h2 className="card-title">Card Tournaments 2025</h2>
+                <h2 className="card-title">{event.name}</h2>
+                <time>
+                  {event.date}
+                </time>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                  {event.content}
                 </p>
               </div>
               <figure>
                 <img
-                  src={'/trophy.jpg'}
-                  alt="trophy" 
-                  />
+                alt={event.alt}
+                src={event.image} 
+                className="aspect-square w-full rounded object-cover bg-white group-hover:opacity-75 xl:aspect-7/8"
+              ></img>
               </figure>
             </div>
 
-            <div className="card bg-gray-400 w-96 shadow-fuchsia-950 shadow-md">
+/*             <span key={event.id} 
+                  className="group border border-gray-400 rounded shadow-fuchsia-950 shadow-md p-5"
+                  >
+              <img
+                alt={event.alt}
+                src={event.image} 
+                className="aspect-square w-full rounded-lg object-cover bg-gray-300 group-hover:opacity-75 xl:aspect-7/8"
+              ></img>
+              <h3 className="mt-4 text-sm text-gray-700">{event.name}</h3>
+              <p className="mt-1 text-lg font-medium text-gray-900">${eve.price}</p>
+              <span className="m-3">
+
+                <button 
+                  id="heroBtn"
+                  className="p-1 rounded-sm">
+                    <a 
+                      id="homeButton"
+                      href="#"
+                      >
+                      Details
+                    </a>
+                </button>
+
+                </span>
+              <span>
+
+                <button 
+                 // onClick={itemSelection}
+                  id="heroBtn"
+                  className="p-1 rounded-sm">
+                    <a 
+                      id="homeButton"
+                      
+                      >
+                      Add to Cart
+                    </a>
+                </button>
+
+              </span>
+            </span> */
+          ))}
+
+
+{/*             <div className="card bg-gray-400 w-96 shadow-fuchsia-950 shadow-md">
               <div className="card-body">
                 <h2 className="card-title">Yu-Gi-Oh Casual Night</h2>
                 <p>
@@ -108,8 +163,8 @@ const Events = () => {
                   src={'/yugiohh.jpg'}
                   alt="yugioh" />
               </figure>
-            </div>
-
+            </div> */}
+{/* 
             <div className="card bg-gray-400 w-96 shadow-2xl mb-3 ">
               <div className="card-body">
                 <h2 className="card-title">Dungeons&Dragons: Adventure League</h2>
@@ -122,7 +177,7 @@ const Events = () => {
                   src={'/gameNight.jpg'}
                   alt="gameNight" />
               </figure>
-            </div>
+            </div> */}
 
           </div>
         </div>
