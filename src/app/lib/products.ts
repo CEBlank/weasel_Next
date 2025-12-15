@@ -254,3 +254,30 @@ export const announcements = [
     date: "December 28th through January 4th"
   }
 ]
+
+export const teamMembers = [
+  {
+    name: "Jac",
+    title:"Founder",
+    image:"/jac.jpg",
+    alt:"Jac Founder"
+  },
+    {
+    name: "Dip",
+    title:"Marketing",
+    image:"/dip.jpg",
+    alt:"Jac Founder"
+  },
+    {
+    name: "Pip",
+    title:"Manager",
+    image:"/pip2.jpg",
+    alt:"Jac Founder"
+  },
+    {
+    name: "Roe",
+    title:"Manager",
+    image:"/roe.jpg",
+    alt:"Jac Founder"
+  },
+]

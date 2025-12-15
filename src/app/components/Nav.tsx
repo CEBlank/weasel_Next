@@ -152,7 +152,7 @@ const navLinks = {
         {id: 'communityLink',
           name: 'Community Page',
           items: [
-            { name: 'Check out the Community Page', href: '../pages/community' },
+            { name: 'Announcements', href: '../pages/community' },
           ]
         },
         {
