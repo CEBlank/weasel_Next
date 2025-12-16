@@ -13,21 +13,24 @@ export async function testConnect() {
   console.log("first test: ", itemsCollection);
 
 
-
   try {
     await client.connect();
-    const database = client.db("products");
+    const database = await client.db("products");
     console.log("database", database);
 
-    const collection = database.collection("books");
+    const collection = await database.collection("books");
     console.log("collection", collection);
 
-    const docCount = await collection.countDocuments({});
-    console.log(docCount);
+
+  //this part gets it
+    const docCount = await collection.find().toArray();
+    console.log("Doc Count", Object.keys(docCount), docCount);
+
+
     // perform actions using client
-  } catch {
+  } finally {
     // Ensures that the client will close when you finish/error
-    console.log("client closing, error")
+    console.log("client closing")
     await client.close();
   }
 }

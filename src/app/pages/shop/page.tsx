@@ -1,9 +1,10 @@
-"use client"
 
-import * as React from 'react'
-import { useState } from "react";
+
+//import * as React from 'react'
+//import { useState } from "react";
 import { Product, productsType, selectedItem } from "app/lib/products";
 import  Modal  from "app/components/modal"
+import { testConnect } from 'app/utils/connectMongo';
 
 type SearchParamProps = {
   searchParams: Record<string, string> | null | undefined;
@@ -13,7 +14,7 @@ type SearchParamProps = {
 const Shop = () => {
   const products = productsType;
   
-
+testConnect();
 
 
   return (
