@@ -15,14 +15,15 @@ export async function testConnect() {
 
   try {
     await client.connect();
+
     const database = await client.db("products");
     console.log("database", database);
-
     const collection = await database.collection("books");
     console.log("collection", collection);
 
 
   //this part gets it
+  //find collection, map to an Array. Array is our new baby!
     const docCount = await collection.find().toArray();
     console.log("Doc Count", Object.keys(docCount), docCount);
 

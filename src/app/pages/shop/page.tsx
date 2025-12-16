@@ -14,7 +14,7 @@ type SearchParamProps = {
 const Shop = () => {
   const products = productsType;
   
-testConnect();
+//testConnect();
 
 
   return (
