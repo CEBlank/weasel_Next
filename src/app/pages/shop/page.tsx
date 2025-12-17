@@ -1,20 +1,33 @@
-
-
-//import * as React from 'react'
-//import { useState } from "react";
 import { Product, productsType, selectedItem } from "app/lib/products";
-import  Modal  from "app/components/modal"
-import { testConnect } from 'app/utils/connectMongo';
+//import  Modal  from "app/components/modal";
+//import docCount from 'app/utils/connectMongo'; 
+//import client from "app/lib/mongoDB";
+//import { GetServerSideProps } from "next";
+//import testConnect from "app/utils/connectMongo";
+//import addItem from "app/lib/addRemove";
 
+/* 
 type SearchParamProps = {
   searchParams: Record<string, string> | null | undefined;
-};
+}; */
 
+type mongoProduct = {
+  id: string,
+  Title: string,
+  Publisher: string,
+  Price: number,
+  Type: string, 
+  AlternateCover: boolean,
+  Stock: number,
+  image: string
+}
 
 const Shop = () => {
   const products = productsType;
-  
-//testConnect();
+
+  //testConnect();
+
+  //console.log(docCount);
 
 
   return (
@@ -26,6 +39,7 @@ const Shop = () => {
           className="text-2xl text-center mb-2 border-b">
             All Products</h2>
 
+        
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 bg-white">
           {products.map((product) => (
             <span key={product.id} 
@@ -54,7 +68,7 @@ const Shop = () => {
 
                 </span>
               <span>
-
+              
                 <button 
                  // onClick={itemSelection}
                   id="heroBtn"
@@ -62,7 +76,7 @@ const Shop = () => {
                     <a 
                       id="homeButton"
                       
-                      >
+                      > 
                       Add to Cart
                     </a>
                 </button>

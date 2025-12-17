@@ -1,32 +1,54 @@
 import client from "app/lib/mongoDB";
+import { GetServerSideProps } from "next";
+//import { Product } from "app/lib/products";
 
-exports = function() {
-
-  //const itemsCollection = client.db("weasel-games-db").collection("products");
- // const purchasesCollection = client.db("store").collection("purchases");
-  // ... paste snippet here ...
+type mongoProduct = {
+  id: string,
+  Title: string,
+  Publisher: string,
+  Price: number,
+  Type: string, 
+  AlternateCover: boolean,
+  Stock: number,
+  image: string
 }
 
-export async function testConnect() {
+
+
+/* const getServerSideProps = (async () => {
+  const itemsCollection = client.db("products").collection("books");
+
+  const ping = await client.connect()
+  const database = await client.db("products");
+  const collection = await database.collection("books");
+  const itemList = await collection.find().toArray();
+  
+  return { props: {itemList} }
+}) satisfies GetServerSideProps<{ itemList : mongoProduct }>
+ */
+
+
+
+export default async function testConnect() {
 
   const itemsCollection = client.db("products").collection("books");
-  console.log("first test: ", itemsCollection);
-
+  //console.log("first test: ", itemsCollection);
 
   try {
     await client.connect();
 
     const database = await client.db("products");
-    console.log("database", database);
+    //console.log("database", database);
     const collection = await database.collection("books");
-    console.log("collection", collection);
+    //console.log("collection", collection);
 
 
   //this part gets it
   //find collection, map to an Array. Array is our new baby!
     const docCount = await collection.find().toArray();
-    console.log("Doc Count", Object.keys(docCount), docCount);
-
+    console.log("Array Doc", docCount);
+    
+    return { props: docCount }
 
     // perform actions using client
   } finally {
@@ -34,5 +56,6 @@ export async function testConnect() {
     console.log("client closing")
     await client.close();
   }
+
 }
-testConnect().catch(console.dir);
+testConnect().catch(console.dir); 

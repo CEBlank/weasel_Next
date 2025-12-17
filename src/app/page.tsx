@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import Image from 'next/image'
-import { Route, Routes } from "react-router-dom";
+//import { useEffect } from 'react';
+//import Image from 'next/image'
+//import { Route, Routes } from "react-router-dom";
 import { news } from "app/lib/products"
 
 import './app.css'
@@ -67,22 +68,24 @@ export default function Home() {
         </div>
       </div>
 
-      <div
-        className="border-t border-gray-200"
-        id="carouselHome">     
-          <div 
-            className="text-center"
-            id='news'>
-            <h1>News and Events</h1>
-          </div>
+    
 
 {/* Responsive design goes wonky at 417 */}
 
     <div
         id="homeCards"
-        className="flex flex-col justify-center">
+        className="flex flex-col justify-center">  
+        
+        <div
+        className="border-t border-gray-200"
+        id="carouselHome">     
+          <div 
+            className="text-center mt-5"
+            id='news'>
+            <h1>News and Events</h1>
+          </div>
 
-        <div className="mx-auto mt-5 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-6 border-t border-gray-700 pt-5 sm:mt-5 sm:pt-5 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-6 border-t border-gray-700 pt-3 sm:pt-3 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {posts.map((post) => (
             <article key={post.id} className="flex max-w-xl flex-col items-start justify-between border rounded p-4 shadow-fuchsia-950 shadow-md">
               <div className="flex items-center gap-x-4 text-xs ">
