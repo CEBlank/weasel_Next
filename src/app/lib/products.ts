@@ -1,6 +1,6 @@
 //stand-in for database 
 
-export type Product = {
+export type ProductType = {
   id: number,
   isbn: string,
   name: string,
@@ -14,17 +14,18 @@ export type Product = {
   year: number,
   price: number,
   stock: number, 
+  quantity: number;
   checked: undefined
   };
 
 export type selectedItem = {
-  Product: Product,
+  Product: ProductType,
   checked: true
 }
 
 
 
-export const productsType: Product[] = [
+export const product: ProductType[] = [
   {
     id: 1,
     isbn: "123",
@@ -39,6 +40,7 @@ export const productsType: Product[] = [
     year: 2024,
     price: 49.99,
     stock: 5,
+    quantity: undefined,
     checked: undefined
   }, 
   {
@@ -55,6 +57,7 @@ export const productsType: Product[] = [
     year: 2024,
     price: 49.99,
     stock: 4,
+    quantity: undefined,
     checked: undefined
   }, 
   {
@@ -71,6 +74,7 @@ export const productsType: Product[] = [
     year: 2024,
     price: 89.99,
     stock: 1,
+    quantity: undefined,
     checked: undefined
   }, 
   {
@@ -87,6 +91,7 @@ export const productsType: Product[] = [
     year: 2020,
     price: 60.00,
     stock: 3,
+    quantity: undefined,
     checked: undefined
   },
     {
@@ -103,6 +108,7 @@ export const productsType: Product[] = [
     year: 2024,
     price: 11.00,
     stock: 11,
+    quantity: undefined,
     checked: undefined
   },
 ]

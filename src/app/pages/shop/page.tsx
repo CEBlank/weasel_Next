@@ -1,5 +1,9 @@
-import { Product, productsType, selectedItem } from "app/lib/products";
-//import  Modal  from "app/components/modal";
+"use client"
+
+import useCartStore from "app/components/cartLogic";
+import { ProductType, product } from "app/lib/products";
+
+import { StoreCard } from "app/components/StoreCard";
 //import docCount from 'app/utils/connectMongo'; 
 //import client from "app/lib/mongoDB";
 //import { GetServerSideProps } from "next";
@@ -11,24 +15,14 @@ type SearchParamProps = {
   searchParams: Record<string, string> | null | undefined;
 }; */
 
-type mongoProduct = {
-  id: string,
-  Title: string,
-  Publisher: string,
-  Price: number,
-  Type: string, 
-  AlternateCover: boolean,
-  Stock: number,
-  image: string
-}
 
 const Shop = () => {
-  const products = productsType;
 
-  //testConnect();
+  const addToCart = useCartStore((state) => state.addToCart);
+  const products = (product || []);
 
-  //console.log(docCount);
-
+ // console.log(products);
+  //testConnect(); //can't use this in client component. will have to pass props
 
   return (
     <div className="">
@@ -38,10 +32,15 @@ const Shop = () => {
         <h2
           className="text-2xl text-center mb-2 border-b">
             All Products</h2>
-
-        
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 bg-white">
+        
           {products.map((product) => (
+            <StoreCard key={product.id} product={product} />
+          ))}
+
+      </div>
+{/*         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 bg-white">
+          {product && product.map((product) => (
             <span key={product.id} 
                   className="group border border-gray-400 rounded shadow-fuchsia-950 shadow-md p-5"
                   >
@@ -70,21 +69,16 @@ const Shop = () => {
               <span>
               
                 <button 
-                 // onClick={itemSelection}
+                  onClick={() => addToCart}
                   id="heroBtn"
                   className="p-1 rounded-sm">
-                    <a 
-                      id="homeButton"
-                      
-                      > 
                       Add to Cart
-                    </a>
                 </button>
 
               </span>
             </span>
           ))}
-        </div>
+        </div>  */}
       </div>
     </div>
   )

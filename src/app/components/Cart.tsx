@@ -1,95 +1,39 @@
 'use client'
 
-import { useState } from 'react'
-import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
-import { ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { useState } from 'react';
+import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react';
+import { ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { product, ProductType } from 'app/lib/products';
 
-const products = [
-  {
-    id: 1,
-    name: 'Dungeons&Dragons: Player Handbook 2024',
-    href: '#',
-    color:"",
-    quantity:"1",
-    price: '$49.99',
-    imageSrc: '#',
-    imageAlt: 'Dungeons and Dragons player handbook 2024 edition.',
-  },
-  {
-    id: 2,
-    name: 'Root - A Game of Woodland Might and Right',
-    href: '#',
-    color:"",
-    quantity:"1",
-    price: '$60.00',
-    imageSrc: '#',
-    imageAlt: '#',
-  },
-  {
-    id: 3,
-    name: 'Arcadia Quest',
-    href: '#',
-    color:"",
-    quantity:"1",
-    price: '$99.99',
-    imageSrc: '#',
-    imageAlt: '#',
-  },
-  {
-    id: 4,
-    name: 'Pathfinder Bestiary',
-    href: '#',
-    color:"",
-    quantity:"1",
-    price: '$49.99',
-    imageSrc: '#',
-    imageAlt: '#',
-  },
-  {
-    id: 5,
-    name: 'Card Keeper',
-    href: '#',
-    color:"",
-    quantity:"1",
-    price: '$18.00',
-    imageSrc: '#',
-    imageAlt: '#',
-  },
-  {
-    id: 6,
-    name: 'Focus Multi-Pack',
-    href: '#',
-    color:"",
-    quantity:"1",
-    price: '$39.00',
-    imageSrc: '#',
-    imageAlt: 'Stack of 3 small drab green cardboard paper card refill boxes with white text.',
-  },
-  {
-    id: 7,
-    name: 'Monster Manual 2024',
-    href: '#',
-    color:"",
-    quantity:"1",
-    price: '$50.00',
-    imageSrc: '#',
-    imageAlt: '#',
-  },
-  {
-    id: 8,
-    name: 'Focus Carry Pouch',
-    href: '#',
-    color:"",
-    quantity:"1",
-    price: '$32.00',
-    imageSrc: '#',
-    imageAlt: 'Textured gray felt pouch for paper cards with snap button flap and elastic pen holder loop.',
-  },
-]
+import useCartStore from './cartLogic';
+
+interface CartItem {
+  id: number,
+  name: string,
+  price: number,
+  quantity: number,
+  };
+
+
 
 
 export default function CartDrawer() {
+  //cart drawer command
   const [open, setOpen] = useState(false)
+
+  //set cart items state, initialize qty
+  const { items, removeFromCart, updateQty } = useCartStore((state) => state);
+
+  const subTotal = items.reduce(
+    (total, item) => total + item.price * item.quantity,
+    0
+  );
+  const tax = subTotal *.05;
+  const total = subTotal + tax;
+
+
+
+
 
   return (
 
@@ -149,10 +93,12 @@ export default function CartDrawer() {
                       </div>
                     </div> 
 
-{/*                     <div className="mt-8">
+{/* Cart Logic in action */}
+
+                    <div className="mt-8">
                       <div className="flow-root">
                         <ul role="list" className="-my-6 divide-y divide-gray-200">
-                          {products.map((product) => (
+                          {product.map((product) => (
                             <li key={product.id} className="flex py-6">
                               <div className="size-24 shrink-0 overflow-hidden rounded-md border">
                                 <img alt={product.imageAlt} src={product.imageSrc} className="size-full object-cover" />
@@ -162,17 +108,18 @@ export default function CartDrawer() {
                                 <div>
                                   <div className="flex justify-between text-base font-medium text-gray-900">
                                     <h3>
-                                      <a href={product.href}>{product.name}</a>
+                                      <a>{product.name}</a>
                                     </h3>
                                     <p className="ml-4">{product.price}</p>
                                   </div>
-                                  <p className="mt-1 text-sm text-gray-500">{product.color}</p>
+                                  <p className="mt-1 text-sm text-gray-500">{product.group}</p>
                                 </div>
                                 <div className="flex flex-1 items-end justify-between text-sm">
                                   <p className="text-gray-500">Qty {product.quantity}</p>
 
                                   <div className="flex">
                                     <button 
+                                      onClick={() => removeFromCart}
                                       id="removeButton"
                                       type="button" 
                                       className="btn font-medium">
@@ -185,7 +132,10 @@ export default function CartDrawer() {
                           ))}
                         </ul>
                       </div>
-                    </div> */}
+                    </div> 
+
+
+
                   </div>
 
                   <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
