@@ -26,7 +26,8 @@
     "next": "^16.0.10",
     "react": "19.2.1",
     "react-dom": "19.2.1",
-    "react-router-dom": "^7.9.6"
+    "react-router-dom": "^7.9.6",
+    "use-shopping-cart": "^3.2.0"
   },
   "devDependencies": {
     "@aws-amplify/backend": "^1.19.0",
