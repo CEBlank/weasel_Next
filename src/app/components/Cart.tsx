@@ -12,9 +12,9 @@ interface CartItem {
   name: string,
   price: number,
   quantity: number,
+  image: string,
+  imageAlt: string,
   };
-
-
 
 
 export default function CartDrawer() {
@@ -31,10 +31,6 @@ export default function CartDrawer() {
   const tax = subTotal *.05;
   const total = subTotal + tax;
 
-
-
-
-
   return (
 
     <div>
@@ -46,6 +42,7 @@ export default function CartDrawer() {
         <ShoppingBagIcon
             aria-hidden="true"
             className="size-6 shrink-0"/>
+            Your Cart: ({items.reduce((sum, i) => sum + i.quantity, 0)})
       </button>
       <Dialog 
         open={open} 
@@ -88,7 +85,7 @@ export default function CartDrawer() {
                           <li
                             className='text-gray-400'
                             >
-                              There's nothing in your cart</li>
+                              Your Cart: ({items.reduce((sum, i) => sum + i.quantity, 0)}) </li>
                         </ul>
                       </div>
                     </div> 
@@ -98,32 +95,33 @@ export default function CartDrawer() {
                     <div className="mt-8">
                       <div className="flow-root">
                         <ul role="list" className="-my-6 divide-y divide-gray-200">
-                          {product.map((product) => (
-                            <li key={product.id} className="flex py-6">
+
+                          {items.map((item) => (
+                            <li key={item.id} className="flex py-6">
                               <div className="size-24 shrink-0 overflow-hidden rounded-md border">
-                                <img alt={product.imageAlt} src={product.imageSrc} className="size-full object-cover" />
+                                <img alt={item.imageAlt} src={item.image} className="size-full object-cover" />
                               </div>
 
                               <div className="ml-4 flex flex-1 flex-col">
                                 <div>
                                   <div className="flex justify-between text-base font-medium text-gray-900">
                                     <h3>
-                                      <a>{product.name}</a>
+                                      <a>{item.name}</a>
                                     </h3>
-                                    <p className="ml-4">{product.price}</p>
+                                    <p className="ml-4">${item.price.toFixed(2)}</p>
                                   </div>
-                                  <p className="mt-1 text-sm text-gray-500">{product.group}</p>
+                                  {/* <p className="mt-1 text-sm text-gray-500">{product.group}</p> */}
                                 </div>
                                 <div className="flex flex-1 items-end justify-between text-sm">
-                                  <p className="text-gray-500">Qty {product.quantity}</p>
+                                  <p className="text-gray-500">Qty {item.quantity}</p>
 
                                   <div className="flex">
                                     <button 
-                                      onClick={() => removeFromCart}
+                                      onClick={() => removeFromCart(item.id)}
                                       id="removeButton"
                                       type="button" 
                                       className="btn font-medium">
-                                      Remove
+                                      X
                                     </button>
                                   </div>
                                 </div>
@@ -141,7 +139,7 @@ export default function CartDrawer() {
                   <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
                     <div className="flex justify-between text-base font-medium text-gray-900">
                       <p>Subtotal</p>
-                      <p>$0.00</p>
+                      <p>${subTotal.toFixed(2)}</p>
                     </div>
                     <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
                     <div className="mt-6">

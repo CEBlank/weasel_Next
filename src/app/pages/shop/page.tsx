@@ -19,6 +19,7 @@ type SearchParamProps = {
 const Shop = () => {
 
   const addToCart = useCartStore((state) => state.addToCart);
+  const activeItem = useCartStore((state) => state.activeItem);
   const products = (product || []);
 
  // console.log(products);

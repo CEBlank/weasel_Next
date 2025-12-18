@@ -14,11 +14,14 @@ import useCartStore from './cartLogic';
 
 const ProductDetails = ({ product }: { product: ProductType }) => {
   const [ isOpen, setIsOpen ] = useState(false);
-  const setItemState = useCartStore((state) => state.addToCart);
+
+  const { activeItem } = useCartStore((state) => state);
 
   function openModal(){
     setIsOpen(true);
-    setItemState(product);
+    activeItem(
+      product
+    ); //tossing type error here "not a function", but does as intended
   }
 
   function closeModal(){
@@ -53,7 +56,6 @@ const ProductDetails = ({ product }: { product: ProductType }) => {
                 >
 
                   <DialogBackdrop
-                    transition
                     id='dialog'
                     className="fixed transition-opacity duration-500 ease-in-out data-closed:opacity-0 "
                     />

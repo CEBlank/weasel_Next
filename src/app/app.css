@@ -293,6 +293,8 @@ form {
 
 #removeButton {
   color: #572364;
+  font-weight: bold;
+  background-color: #9cb2b8;
 }
 
 #removeButton:hover {

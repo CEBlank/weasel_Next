@@ -9,16 +9,17 @@ interface CartItem {
   name: string,
   price: number,
   quantity: number,
+  image: string,
+  imageAlt: string,
   };
 
 interface CartState {
   items: CartItem [],
-  //activeItem: (id: number) => void; //assign an active item
+  activeItem: (product: ProductType) => void;
   addToCart: (product: ProductType) => void;
   removeFromCart: (id: number) => void;
   updateQty: (type: "increment" | "decrement", id: number) => void;
 }
-
 
 //add and remove items
 const useCartStore = create<CartState>()(
@@ -29,7 +30,7 @@ const useCartStore = create<CartState>()(
         const existingProduct = get().items.find(
           (item) => item.id === product.id
         );
-        console.log("added to cart: ", product);
+        //console.log("added to cart: ", product);
         set({          
           items: existingProduct
             ? get().items
@@ -40,6 +41,8 @@ const useCartStore = create<CartState>()(
                   id: product.id,
                   name: product.name,
                   price: product.price,
+                  image: product.imageSrc,
+                  imageAlt: product.imageAlt,
                 },
               ],
         });
@@ -49,12 +52,22 @@ const useCartStore = create<CartState>()(
           toast.success("Product Added successfully");
         }
       },
+
+      //not a function? But coded to match the rest of the functions?
+      activeItem: (product) => {
+        set({
+          items: get().items.filter((item) => item.id === product.id),
+        });
+        toast.success("View Item");
+      },
+
       removeFromCart: (id) => {
         set({
           items: get().items.filter((item) => item.id !== id),
         });
         toast.success("Item removed");
       },
+
       updateQty: (type, id) => {
         const item = get().items.find((item) => item.id === id);
         if (!item) {
