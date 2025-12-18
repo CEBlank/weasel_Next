@@ -308,5 +308,8 @@ form {
   color: #4f7aaa;
 }
 
-/* Community Page */
+/* Shop Page */
 
+#modalPanel {
+  background-color: #fff;
+}
