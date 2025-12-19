@@ -116,18 +116,19 @@ export default function CartDrawer() {
                                 <div className="flex flex-1 items-end justify-between text-sm">
 
                                 <div className="flex">
-                                    <button 
-                                      onClick={() => updateQty("increment", item.id)}
-                                      id="quantButton"
-                                      className="btn btn-sm font-medium">
-                                      +
-                                    </button>
 
                                     <button
                                       onClick={() => updateQty("decrement", item.id)}
                                       id="quantButton"
                                       className="btn btn-sm font-medium mx-2">
                                       -
+                                    </button>
+
+                                    <button 
+                                      onClick={() => updateQty("increment", item.id)}
+                                      id="quantButton"
+                                      className="btn btn-sm font-medium">
+                                      +
                                     </button>
 
                                     <span className="text-gray-500">Qty: {item.quantity}</span>
