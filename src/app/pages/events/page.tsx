@@ -34,59 +34,25 @@ const Events = () => {
           </div> 
             {/* <CalendarApp /> */}
           </div>
-
-        <div
-          className="mt-2 md:flex-wrap">
-          <h1
-            className="mb-3 border-b"
-            id='detailsHead'
-          >Details</h1>
-
-            <div
-              id="detailsContent" 
-              className="flex mx-auto mb-15 rounded max-w-full min-h-50 bg-white border md:flex-wrap md:py-3 sm:px-5 shadow-fuchsia-950 shadow-md">
-                <p className="my-2 py-1 sm:px-10">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.
-                </p>
-                    <button 
-                      id="heroBtn" 
-                      className="btn mx-1 mt-2 justify-end">
-                        <a 
-                          id="homeButton"
-                          href="#">
-                          Register
-                        </a>
-                    </button>
             </div>
 
-            <div
-              id="detailsContent" 
-              className="flex mx-auto mb-15 rounded max-w-full min-h-50 bg-white border md:flex-wrap md:py-3 sm:px-5 shadow-fuchsia-950 shadow-md">
-                <p className="my-3">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.
-                </p>
-                    <button 
-                      id="heroBtn" 
-                      className="btn mx-1 mt-2 mb-3">
-                        <a 
-                          id="homeButton"
-                          href="#">
-                          Contact Us
-                        </a>
-                    </button>
+            <div className="mt-10 justify-self-center">
+              <button
+                id="heroBtn"
+                className="btn">
+                Event Registrations
+              </button>
             </div>
-        </div>
+        
 
         <div
           id='eventsHead'
-          className="text-center border-b">
+          className="text-center border-b mt-15">
           <h1>Past Events</h1>
         </div>
 
         <div className="mx-auto max-w-2xl px-4 py-5 sm:px-6 sm:py-4 lg:max-w-7xl lg:px-8 bg-white">
           
-          <div id="eventGallery" className="flex ">
-
               <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-6 border-t border-gray-700 pt-3 sm:pt-3 lg:mx-0 lg:max-w-none lg:grid-cols-3">
                   {pastEvents.map((event) => (
                     <article key={event.id} className="flex max-w-xl flex-col items-start justify-between border rounded p-4 shadow-fuchsia-950 shadow-md">
@@ -108,11 +74,10 @@ const Events = () => {
                     </article>
                   ))}
               </div>
-
-          </div>
+          
         </div>
 
-        </div>
+        
       </div>   
     </>
   )

@@ -194,21 +194,6 @@ footer {
   border-radius: 2%;
 }
 
-#detailsContent {
-  margin-left: 5em;
-  margin-right: 5em;
-  justify-content: center;
-  text-align: center;
-}
-
-#eventGallery {
-  justify-content: center;
-}
-
-#eventGallery2 {
-  justify-content: center;
-}
-
 
 h2 {
   color: #572364;
