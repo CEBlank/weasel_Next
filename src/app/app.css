@@ -87,21 +87,21 @@ h1 {
 }
 
 #dialogPanel {
-  background-color: #D7E3F4;
+  background-color: #fff;
 }
 
 #mobileCat {
   color: #853A98;
-  background-color: #D7E3F4;
+  background-color: #fff;
 }
 
 #mobileSection {
   color: #853A98;
-  background-color: #D7E3F4;
+  background-color: #fff;
 }
 
 #mobileMenu {
-  background-color: #D7E3F4;
+  background-color: #fff;
   min-height: 100%;
 }
 
@@ -278,7 +278,7 @@ form {
 /* Cart */
 
 #cart {
-  background-color: #D7E3F4;
+  background-color: #fff;
   color: #853A98;
 }
 
@@ -288,19 +288,27 @@ form {
 }
 
 #checkOut:hover {
-  color: #4f7aaa;
+  background-color: #4ea01f;
 }
 
 #removeButton {
   color: #572364;
   font-weight: bold;
-  background-color: #9cb2b8;
+  background-color: #e47900;
 }
 
 #removeButton:hover {
-  color: #4f7aaa;
+  background-color: #e42e00;
 }
 
+#quantButton {
+  background-color: #853A98;
+  color:#D7E3F4;
+}
+
+#quantButton:hover {
+  background-color: #4ea01f;
+}
 
 #continueButton {
   color: #572364;
@@ -315,3 +323,12 @@ form {
 #modalPanel {
   background-color: #fff;
 }
+
+#cartBtn {
+  background-color: #853A98;
+}
+
+#cartBtn:hover {
+  background-color: #4ea01f;
+}
+

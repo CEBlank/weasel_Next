@@ -85,7 +85,7 @@ export default function CartDrawer() {
                           <li
                             className='text-gray-400'
                             >
-                              Your Cart: ({items.reduce((sum, i) => sum + i.quantity, 0)}) </li>
+                              Cart: ({items.reduce((sum, i) => sum + i.quantity, 0)}) </li>
                         </ul>
                       </div>
                     </div> 
@@ -110,19 +110,38 @@ export default function CartDrawer() {
                                     </h3>
                                     <p className="ml-4">${item.price.toFixed(2)}</p>
                                   </div>
-                                  {/* <p className="mt-1 text-sm text-gray-500">{product.group}</p> */}
                                 </div>
+
+
                                 <div className="flex flex-1 items-end justify-between text-sm">
-                                  <p className="text-gray-500">Qty {item.quantity}</p>
+
+                                <div className="flex">
+                                    <button 
+                                      onClick={() => updateQty("increment", item.id)}
+                                      id="quantButton"
+                                      className="btn btn-sm font-medium">
+                                      +
+                                    </button>
+
+                                    <button
+                                      onClick={() => updateQty("decrement", item.id)}
+                                      id="quantButton"
+                                      className="btn btn-sm font-medium mx-2">
+                                      -
+                                    </button>
+
+                                    <span className="text-gray-500">Qty: {item.quantity}</span>
+                                  </div>
 
                                   <div className="flex">
+
                                     <button 
                                       onClick={() => removeFromCart(item.id)}
                                       id="removeButton"
-                                      type="button" 
                                       className="btn font-medium">
-                                      X
+                                      Remove All
                                     </button>
+
                                   </div>
                                 </div>
                               </div>

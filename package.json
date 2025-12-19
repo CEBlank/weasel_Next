@@ -13,6 +13,7 @@
     "@clerk/nextjs": "^6.35.5",
     "@headlessui/react": "^2.2.9",
     "@heroicons/react": "^2.2.0",
+    "@material-tailwind/html": "^3.0.0-beta.7",
     "@next/env": "16.0.7",
     "@vercel/functions": "^3.3.4",
     "auth0": "^5.1.0",

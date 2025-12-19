@@ -44,9 +44,9 @@ export function StoreCard({ product }: { product: ProductType }) {
           <ProductDetails key={product.id} product={product} />
 
           <button 
-          id="heroBtn"
+          id="cartBtn"
           onClick={() => addToCart(product)} 
-          className="p-1 mt-2 rounded-sm">
+          className="p-1 mt-2 rounded-sm hover:bg-violet-700 focus:outline-2 focus:outline-offset-2 focus:outline-fuchsia-700">
             Add to Cart
           </button>
         </span>

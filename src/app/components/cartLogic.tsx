@@ -58,7 +58,7 @@ const useCartStore = create<CartState>()(
         set({
           items: get().items.filter((item) => item.id === product.id),
         });
-        toast.success("View Item");
+        toast.success("Viewing Item");
       },
 
       removeFromCart: (id) => {
@@ -81,7 +81,7 @@ const useCartStore = create<CartState>()(
           set({
             items: [...get().items],
           });
-          console.log("removed from card: ", item )
+          //console.log("removed from cart: ", item )
         }
       },
     }),

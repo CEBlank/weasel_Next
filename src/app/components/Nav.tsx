@@ -4,7 +4,7 @@
 //import Router from 'next/router';
 //import { forwardRef } from 'react'
 
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -197,6 +197,8 @@ const navLinks = {
 
 const Nav = () => {
   const [open, setOpen] = useState(false)
+  const closeButtonRef = useRef(null);
+  const closePopover = () => closeButtonRef.current?.click();
 
  // console.log('Nav Loaded')
 
@@ -359,9 +361,13 @@ const Nav = () => {
                 ))}
 
                 {navLinks.categories.map((category) => (
-                  <Popover key={category.name} className='flex' >
+                  <Popover
+                    key={category.name} 
+                    className='flex' 
+                    ref={closeButtonRef}>
+                    
                     <div className='relative flex' >
-                      <PopoverButton className='group relative flex items-center justify-center text-sm font-medium transition-colors duration-200 ease-out' >
+                      <PopoverButton className='group relative flex items-center justify-center text-sm font-medium transition-colors duration-200 ease-out'>
                         {category.name}
                         <span
                         aria-hidden="true"
@@ -418,6 +424,7 @@ const Nav = () => {
                           </div>
                         </div>
                       </PopoverPanel>
+                    
                   </Popover>
                 ))}
               </div>

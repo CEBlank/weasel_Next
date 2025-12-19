@@ -1,4 +1,5 @@
 import { pastEvents } from "app/lib/products";
+import Link from "next/link";
 
 const Events = () => {
 
@@ -32,7 +33,7 @@ const Events = () => {
           
           </div> 
             {/* <CalendarApp /> */}
-            </div>
+          </div>
 
         <div
           className="mt-2 md:flex-wrap">
@@ -43,20 +44,24 @@ const Events = () => {
 
             <div
               id="detailsContent" 
-              className="rounded max-w-full min-h-50 bg-white border md:flex-wrap md:py-3 shadow-fuchsia-950 shadow-md">
-                <p className="my-3 py-1">
+              className="flex mx-auto mb-15 rounded max-w-full min-h-50 bg-white border md:flex-wrap md:py-3 sm:px-5 shadow-fuchsia-950 shadow-md">
+                <p className="my-2 py-1 sm:px-10">
                   Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.
                 </p>
                     <button 
                       id="heroBtn" 
-                      className="btn mx-1 mt-2">
+                      className="btn mx-1 mt-2 justify-end">
                         <a 
                           id="homeButton"
                           href="#">
                           Register
                         </a>
                     </button>
+            </div>
 
+            <div
+              id="detailsContent" 
+              className="flex mx-auto mb-15 rounded max-w-full min-h-50 bg-white border md:flex-wrap md:py-3 sm:px-5 shadow-fuchsia-950 shadow-md">
                 <p className="my-3">
                   Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.
                 </p>
@@ -70,73 +75,39 @@ const Events = () => {
                         </a>
                     </button>
             </div>
-
         </div>
-
 
         <div
           id='eventsHead'
-          className="my-2 text-center border-b">
+          className="text-center border-b">
           <h1>Past Events</h1>
         </div>
-      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 bg-white">
-        <div id="eventGallery" className="flex ">
 
-          <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto max-w-2xl px-4 py-5 sm:px-6 sm:py-4 lg:max-w-7xl lg:px-8 bg-white">
+          
+          <div id="eventGallery" className="flex ">
 
-          {pastEvents.map((event) => (
-
-            <div
-              key={event.id} 
-              className="card bg-white border rounded  w-96 shadow-fuchsia-950 shadow-md">
-              <div className="card-body">
-                <h2 className="card-title">{event.name}</h2>
-                <time>
-                  {event.date}
-                </time>
-                <p>
-                  {event.content}
-                </p>
+              <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-6 border-t border-gray-700 pt-3 sm:pt-3 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+                  {pastEvents.map((event) => (
+                    <article key={event.id} className="flex max-w-xl flex-col items-start justify-between border rounded p-4 shadow-fuchsia-950 shadow-md">
+                      <div className="group relative grow">
+                        <h3 className="mt-3 text-lg/6 font-semibold">
+                          {event.name}
+                        </h3>
+                        <p className="mt-5 line-clamp-3 text-sm/6">{event.content}</p>
+                      </div>
+                      <div className="relative mt-8 flex items-center gap-x-4 justify-self-end">
+                        <figure>
+                            <img
+                              alt={event.alt}
+                              src={event.image} 
+                              className="aspect-square w-full rounded object-cover bg-gray-300 xl:aspect-7/8"
+                            ></img>                    
+                            </figure>
+                      </div>
+                    </article>
+                  ))}
               </div>
-              <figure>
-                <img
-                alt={event.alt}
-                src={event.image} 
-                className="aspect-square w-full rounded object-cover bg-white group-hover:opacity-75 xl:aspect-7/8"
-              ></img>
-              </figure>
-            </div>
-            ))}
-            </div>
-
-
-{/*             <div className="card bg-gray-400 w-96 shadow-fuchsia-950 shadow-md">
-              <div className="card-body">
-                <h2 className="card-title">Yu-Gi-Oh Casual Night</h2>
-                <p>
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                </p>
-              </div>
-              <figure>
-                <img
-                  src={'/yugiohh.jpg'}
-                  alt="yugioh" />
-              </figure>
-            </div> */}
-{/* 
-            <div className="card bg-gray-400 w-96 shadow-2xl mb-3 ">
-              <div className="card-body">
-                <h2 className="card-title">Dungeons&Dragons: Adventure League</h2>
-                <p>
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                </p>
-              </div>
-              <figure>
-                <img
-                  src={'/gameNight.jpg'}
-                  alt="gameNight" />
-              </figure>
-            </div> */}
 
           </div>
         </div>
