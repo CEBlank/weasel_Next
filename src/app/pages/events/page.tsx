@@ -1,8 +1,10 @@
 import { pastEvents } from "app/lib/products";
 import Link from "next/link";
+import testConnect from "app/utils/connectMongo"; 
+
 
 const Events = () => {
-
+  
   //const pastEvent = pastEvents;
 
   return (

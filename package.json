@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^4.13.0",
+    "@aws-sdk/client-dynamodb": "^3.956.0",
+    "@aws-sdk/lib-dynamodb": "^3.956.0",
     "@clerk/nextjs": "^6.35.5",
     "@headlessui/react": "^2.2.9",
     "@heroicons/react": "^2.2.0",

@@ -18,11 +18,19 @@ export type ProductType = {
   checked: undefined
   };
 
-export type selectedItem = {
+export type SelectedItem = {
   Product: ProductType,
   checked: true
 }
 
+export type GameEvent = {
+  id: number, 
+  name: string, 
+  date: Date,
+  signUpNeeded: boolean,
+  minCount: number, 
+  game: string
+}
 
 
 export const product: ProductType[] = [

@@ -1,9 +1,29 @@
-import type { PropsWithChildren } from 'react'
+//import type { PropsWithChildren } from 'react'
+import { GetServerSideProps } from "next";
 import { Protect } from '@clerk/nextjs'
 
-export default function Admin() {
 
-//role org:admin works, permissions org:admin did not... Progress!
+import { GameEvent } from 'app/lib/products'
+import { events } from "app/utils/connectMongo";
+
+
+/* const getServerSideProps = (async () => {
+  const itemsCollection = client.db("products").collection("books");
+
+  const ping = await client.connect()
+  const database = await client.db("products");
+  const collection = await database.collection("books");
+  const itemList = await collection.find().toArray();
+  
+  return { props: {itemList} }
+}) satisfies GetServerSideProps<{ itemList : mongoProduct }>
+ */
+
+export default function Admin( { props: events } ) {
+
+  //testConnect();
+
+  console.log(events);
 
   return (
     <Protect
@@ -33,6 +53,14 @@ export default function Admin() {
                     href="#">
                     Manage Events
                   </a>
+
+
+
+
+
+
+
+
                   <br />
                     
                 <div className="mt-5 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 mb-5">

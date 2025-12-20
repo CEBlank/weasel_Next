@@ -1,16 +1,15 @@
 import client from "app/lib/mongoDB";
+import { ObjectId } from "mongodb";
 import { GetServerSideProps } from "next";
 //import { Product } from "app/lib/products";
 
-type mongoProduct = {
-  id: string,
-  Title: string,
-  Publisher: string,
-  Price: number,
-  Type: string, 
-  AlternateCover: boolean,
-  Stock: number,
-  image: string
+export type GameEvent = {
+  _id: ObjectId, 
+  name: string, 
+  date: Date,
+  signUpNeeded: boolean,
+  minCount: number, 
+  game: string
 }
 
 
@@ -29,33 +28,41 @@ type mongoProduct = {
 
 
 
-export default async function testConnect() {
+const getServerSideProps = (async () => {
 
-  const itemsCollection = client.db("products").collection("books");
-  //console.log("first test: ", itemsCollection);
+  const itemsCollection = client.db("gameEvents").collection("Events");
+  console.log("first test: ", itemsCollection);
 
-  try {
+  const events = await client.db("gameEvents").collection("Events").find().toArray(); //goodness this is a line.
+  console.log(events);
+
+  return { props: { events } }
+
+/*  try {
     await client.connect();
 
-    const database = await client.db("products");
-    //console.log("database", database);
-    const collection = await database.collection("books");
-    //console.log("collection", collection);
+    const database = await client.db("gameEvents");
+    console.log("database", database);
+    const collection = await database.collection("Events");
+    console.log("collection", collection);
 
 
   //this part gets it
   //find collection, map to an Array. Array is our new baby!
-    const docCount = await collection.find().toArray();
-    console.log("Array Doc", docCount);
+    const events = await collection.find().toArray();
+    console.log("Array Doc", events);
     
-    return { props: docCount }
+    return { props: events }
 
     // perform actions using client
   } finally {
     // Ensures that the client will close when you finish/error
     console.log("client closing")
     await client.close();
-  }
+  } */
+ // return { props: events }
 
-}
-testConnect().catch(console.dir); 
+})
+
+export default getServerSideProps;
+

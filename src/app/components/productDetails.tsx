@@ -11,7 +11,6 @@ import { useState } from 'react'
 
 import { ProductType, product } from "app/lib/products";
 import useCartStore from './cartLogic';
-import { ExclamationTriangleIcon } from '@heroicons/react/24/outline';
 
 
 const ProductDetails = ({ product }: { product: ProductType }) => {
@@ -21,7 +20,7 @@ const ProductDetails = ({ product }: { product: ProductType }) => {
 
   function openModal(){
     setIsOpen(true);
-    //activeItem(product); //tossing type error here "not a function", but does as intended
+    //activeItem(product); //tossing type error here "not a function"
   }
 
   function closeModal(){
