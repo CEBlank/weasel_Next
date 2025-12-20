@@ -1,68 +1,26 @@
 import client from "app/lib/mongoDB";
-import { ObjectId } from "mongodb";
-import { GetServerSideProps } from "next";
-//import { Product } from "app/lib/products";
+//import { GetServerSideProps } from "next";
+//import { GameEvent } from "app/lib/products";
 
-export type GameEvent = {
-  _id: ObjectId, 
-  name: string, 
-  date: Date,
-  signUpNeeded: boolean,
-  minCount: number, 
-  game: string
-}
+//GetServerSideProps throws error on "satisfies" due to type error. 
+//cannot pass these for the life of me.
+//almost as bad as kidney stones
+//Property 'X' does not exist on type 'WithId<Document>[]' - until I expire.
+//never. ever. ever. again
+//UX -4000 points
+//this has been a miserable experience, MongoDB. Truly, truly horrible. 
 
 
-
-/* const getServerSideProps = (async () => {
-  const itemsCollection = client.db("products").collection("books");
-
-  const ping = await client.connect()
-  const database = await client.db("products");
-  const collection = await database.collection("books");
-  const itemList = await collection.find().toArray();
-  
-  return { props: {itemList} }
-}) satisfies GetServerSideProps<{ itemList : mongoProduct }>
- */
-
-
-
-const getServerSideProps = (async () => {
+export async function connectMongo() {
 
   const itemsCollection = client.db("gameEvents").collection("Events");
   console.log("first test: ", itemsCollection);
 
-  const events = await client.db("gameEvents").collection("Events").find().toArray(); //goodness this is a line.
+  const events = await client.db("gameEvents").collection("Events").find({}).toArray(); //goodness this is a line.
   console.log(events);
+  
+  return events;
 
-  return { props: { events } }
+  }; 
 
-/*  try {
-    await client.connect();
-
-    const database = await client.db("gameEvents");
-    console.log("database", database);
-    const collection = await database.collection("Events");
-    console.log("collection", collection);
-
-
-  //this part gets it
-  //find collection, map to an Array. Array is our new baby!
-    const events = await collection.find().toArray();
-    console.log("Array Doc", events);
-    
-    return { props: events }
-
-    // perform actions using client
-  } finally {
-    // Ensures that the client will close when you finish/error
-    console.log("client closing")
-    await client.close();
-  } */
- // return { props: events }
-
-})
-
-export default getServerSideProps;
 
