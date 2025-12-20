@@ -1,0 +1,8 @@
+{  
+  id: number, 
+  name: string, 
+  date: Date,
+  signUpNeeded: boolean,
+  minCount: number, 
+  game: string
+}
