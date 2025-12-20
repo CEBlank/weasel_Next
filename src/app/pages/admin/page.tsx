@@ -5,10 +5,11 @@ import { Protect } from '@clerk/nextjs'
 
 export default function Admin() {
 
+  
 
   return (
     <Protect
-      role='org:admin'
+      role="org:admin"
       fallback={<p>Only an Admin can access this content.</p>}
     >
   <div className="mx-auto max-w-2xl px-4 py-20 sm:px-20 sm:py-5 lg:max-w-7xl lg:px-8 bg-white">

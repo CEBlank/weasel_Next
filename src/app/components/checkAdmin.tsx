@@ -33,7 +33,11 @@ const CustomUserButton = () => {
     //hard code it for testing only
     //const adminID = 'user_36DunqSRu2Afx58qQG8cYzHZbTZ';
 
-  //  console.log("checked user", user);
+   // console.log("checked user", user);
+
+    //const adminCheck = user.organizationMemberships[0].role;
+
+    //console.log(adminCheck);
   
   if (isLoaded) {
     return (
