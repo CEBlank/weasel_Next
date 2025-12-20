@@ -1,24 +1,9 @@
-'use client'
-import { useState, useEffect } from "react";
+
 
 import { Protect } from '@clerk/nextjs'
-import client from "app/lib/mongoDB";
-//import getHandler from "app/utils/getData";
 //import { getServerSideProps } from "app/utils/connectMongo";
 
 export default function Admin() {
-
-    const [ eventList, setList ] = useState([]);
-
-    const checkList = async () => {
-      const check = await fetch("/app/utils/getData.ts");
-
-      if (check.ok) {
-        const data = await check.json();
-        setList(data);
-        console.log("nope, ", eventList);
-      }
-    }
 
 
   return (
@@ -49,18 +34,6 @@ export default function Admin() {
                     href="#">
                     Manage Events
                   </a>
-
-              <div className='mt-10 border rounded shadow-sm shadow-fuchsia-950 text-center px-20'>
-                <h2>Get Data Section</h2>
-                  <button
-                    id="heroBtn"
-                    className='rounded p-2'
-                    >
-                    Get Data... Maybe?
-                  </button>
-
-              </div>
-                
 
                   <br />
                     
