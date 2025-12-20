@@ -1,29 +1,11 @@
 //import type { PropsWithChildren } from 'react'
-import { GetServerSideProps } from "next";
+//import { GetServerSideProps } from "next";
 import { Protect } from '@clerk/nextjs'
 
 
-import { GameEvent } from 'app/lib/products'
-//import { events } from "app/utils/connectMongo";
-
-
-/* const getServerSideProps = (async () => {
-  const itemsCollection = client.db("products").collection("books");
-
-  const ping = await client.connect()
-  const database = await client.db("products");
-  const collection = await database.collection("books");
-  const itemList = await collection.find().toArray();
-  
-  return { props: {itemList} }
-}) satisfies GetServerSideProps<{ itemList : mongoProduct }>
- */
-
 export default function Admin( ) {
 
-  //testConnect();
 
-  //console.log(events);
 
   return (
     <Protect

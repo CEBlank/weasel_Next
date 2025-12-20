@@ -10,8 +10,8 @@ const client = new DynamoDBClient({
   }),
 });
 
-const docClient = DynamoDBDocumentClient.from(client);
+export const docClient = DynamoDBDocumentClient.from(client);
 
-const data = await client.send(new ScanCommand({
+/* const data = await client.send(new ScanCommand({
   TableName: process.env.DYNAMODB_TABLE_NAME,
-}));
+})); */
