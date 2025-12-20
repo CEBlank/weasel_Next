@@ -4,7 +4,7 @@ import { Protect } from '@clerk/nextjs'
 
 
 import { GameEvent } from 'app/lib/products'
-import { events } from "app/utils/connectMongo";
+//import { events } from "app/utils/connectMongo";
 
 
 /* const getServerSideProps = (async () => {
@@ -19,11 +19,11 @@ import { events } from "app/utils/connectMongo";
 }) satisfies GetServerSideProps<{ itemList : mongoProduct }>
  */
 
-export default function Admin( { props: events } ) {
+export default function Admin( ) {
 
   //testConnect();
 
-  console.log(events);
+  //console.log(events);
 
   return (
     <Protect
